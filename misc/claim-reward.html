@@ -13,14 +13,14 @@
         function mySimplePublicVerifier() {
             var secret = document.getElementById("floatingPassword").value;
             var userName = document.getElementById("name").value;
-            if(secret == "" && userName != "") {
+            if(secret == "bazinga" && userName != "") {
                 document.getElementById("submitbtn").disabled = false;
             } else {
                 document.getElementById("submitbtn").disabled = true;
             }
             //set form action with user name and secret
             var form = document.getElementById("claimform");
-            form.action = "https://kovaiwatermarker.azurewebsites.net/api/watermark?phrase=" + userName + "%20finished%20DSAG%20ABAP%20Dev%20Day%20Feb23&imagelink=https://kovaiintegratedemo.blob.core.windows.net/sticker/ninjas.png";
+            form.action = "https://kovaiwatermarker.azurewebsites.net/api/watermark?phrase=" + userName + "%20finished%20DSAG%20TechXChange%20Microsoft%20Lab%8Feb24&imagelink=https://kovaiintegratedemo.blob.core.windows.net/sticker/ninjas.png";
         }
         //open new web page with the generated image
         function mySubmit(){
@@ -33,7 +33,7 @@
 </head>
 <body>
     <div class="container-sm">
-        <h2>🏆Well done fellow ABAP'er!🏆</h2>
+        <h2>🏆Well done fellow Developer!🏆</h2>
         <br>
         <form id="claimform">
             <div class="mb-3">

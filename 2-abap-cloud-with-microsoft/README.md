@@ -2,6 +2,10 @@
 
 **[🏠Home](../README.md)** - [ Quest 1 >](student/quest1.md)
 
+Digitization of business processes and deriving intelligent action automatically is one of the mega trends across all industries globally. As part of this mission, should you choose to accept it, you will experience challenges and solution approaches firsthand acting as the much needed incubation team 🐣 of the Contoso Inc.
+
+You will be expanding your ABAP developer horizon and ultimately be equipped to shape digitization efforts one step at a time. But first things first.
+
 ## 🧙🏾‍♀️Epic Quests
 
 Our journey will start from ...
@@ -18,39 +22,42 @@ Our journey will start from ...
 🌟
 🕒 30 mins
 
-## [Quest 1](quest1.md) - 
+## [Quest 1](student/quest1.md) - 
 
 🌟🌟🌟🌟
 🕒 1 h
 
-## [Quest 2](quest2.md) - 
+## [Quest 2](student/quest2.md) - 
 
 🌟🌟🌟
 🕒 45 mins
 
 ⏳Take a natural break here if suitable.
 
-## [Quest 3](quest3.md) - 
+## [Quest 3](student/quest3.md) - 
 
 🌟🌟🌟🌟
 🕒 1,5 h
 
-## [Quest 4](quest4.md) - 
+## [Quest 4](student/quest4.md) - 
 
 🌟
 🕒 30 mins
 
-## [Quest 5](quest5.md) - 
+## [Quest 5](student/quest5.md) - 
 
 🌟🌟
 🕒 1 h
 
-## [Quest 6](quest6.md) - 
+## [Quest 6](student/quest6.md) - 
 
 🌟
 🕒 30 mins
 
 Approach the last quest with a bang
+
+> [!TIP]
+>🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
 ## Where to next?
 

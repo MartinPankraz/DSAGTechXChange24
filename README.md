@@ -15,6 +15,9 @@ Find us on-site in Hamburg. We are looking forward to meeting you in person! �
 | Build your own **ChatGPT** | 👉[🧙](./3-build-your-own-chatgpt/README.md) | Learn how to build your own chatbot with GPT-4 and deploy it to Azure. |
 | Using **Terraform for Cross-Cloud Setup** of **SAP BTP** and **Microsoft Azure** | 👉[🏗️](https://github.com/SAP-samples/teched2023-XP160) | Use industry-standard Terraform to deploy and provision your apps cross-cloud running on SAP Business Technology Platform (SAP BTP) Microsoft Azure leveraging the SAP Private Link service. |
 
+> [!TIP]
+>🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
+
 ## Recommended courses and further learning
 
 ## 📢Feedback
