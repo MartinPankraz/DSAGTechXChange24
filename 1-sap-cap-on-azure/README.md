@@ -20,19 +20,19 @@ Our journey will start from ...
 🌟
 🕒 30 mins
 
-## [Quest 1](student/quest1.md) - 
+## [Quest 1](student/quest1.md) - Understand what we want to build.
 
 🌟🌟🌟🌟
 🕒 1 h
 
-## [Quest 2](student/quest2.md) - 
+## [Quest 2](student/quest2.md) - Prepare your Development Environment
 
 🌟🌟🌟
 🕒 45 mins
 
 ⏳Take a natural break here if suitable.
 
-## [Quest 3](student/quest3.md) - 
+## [Quest 3](student/quest3.md) - The inner dev loop: Running the code in your dev environment.
 
 🌟🌟🌟🌟
 🕒 1,5 h

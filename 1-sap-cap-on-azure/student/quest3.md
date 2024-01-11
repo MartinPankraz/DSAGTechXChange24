@@ -116,6 +116,6 @@
 
 ## Where to next?
 
-[ < Quest 2 ](student/quest2.md) - **[🏠Home](../README.md)** - [ Quest 4 >](student/quest4.md)
+[ < Quest 2 ](quest2.md) - **[🏠Home](../README.md)** - [ Quest 4 >](quest4.md)
 
 [🔝](#)

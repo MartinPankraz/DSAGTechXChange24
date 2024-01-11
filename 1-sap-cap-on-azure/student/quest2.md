@@ -1,4 +1,4 @@
-# Quest 2 - Prepare your Development Environment
+# Quest 2 - Prepare your development environment
 
 
 ## Prepare your fork.
@@ -108,6 +108,6 @@ You have two options:
 
 ## Where to next?
 
-[ < Quest 1 ](student/quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](student/quest3.md)
+[ < Quest 1 ](quest1.md) - **[🏠Home](../README.md)** - [ Quest 3 >](quest3.md)
 
 [🔝](#)
