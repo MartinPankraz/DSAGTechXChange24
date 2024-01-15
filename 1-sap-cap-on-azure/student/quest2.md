@@ -20,7 +20,9 @@ You have two options:
 
 - Clone the repository to your development machine. Please only select this path if you are confident to be all set on your dev machine. (:construction: What do they need to be 'all set'.?)
 
-### Option 1: Initialize your codespace
+  :point_up: We will not explain this path in the remainder of this tutorial.
+
+### Initialize your codespace
 
 - Open your fork of the repository.
 
@@ -100,11 +102,6 @@ You have two options:
   ![](2024-01-10-15-39-10.png)
 
   
-
-
-### Option 2: Do it locally.
-
-:construction: Do we even want to explain that?
 
 ## Where to next?
 
