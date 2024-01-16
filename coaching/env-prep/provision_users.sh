@@ -11,7 +11,7 @@ do
     az ad user create \
         --display-name "MicroHack Participant ${i}" \
         --password "${PASSWORD}" \
-        --user-principal-name "mhp-${i}@mngenvmcap323185.onmicrosoft.com" > mhp-${i}.json
+        --user-principal-name "mhp-${i}@mngenvmcap323185.onmicrosoft.com" > mhp-${i}_details.json
     echo $PASSWORD > mhp-${i}_password.txt
 
 done
@@ -25,7 +25,7 @@ do
         --location ${LOCATION} \
         --query id \
         --output tsv)
-    USER_PRINCIPAL_NAME=$(cat mhp-${i}.json | jq -r '.userPrincipalName')
+    USER_PRINCIPAL_NAME=$(cat mhp-${i}_details.json | jq -r '.userPrincipalName')
     az role assignment create \
         --assignee ${USER_PRINCIPAL_NAME} \
         --role Contributor \
