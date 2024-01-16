@@ -57,10 +57,10 @@
 ## Setup your environment configuration
 
 
-- In the terminal, go back to the root directory of your workspace.
+- In the terminal, switch into the `azd-rg` directory of your workspace.
 
   ```
-  cd $env:CODESPACE_VSCODE_FOLDER
+  cd $CODESPACE_VSCODE_FOLDER/azd-rg
   ```
 
 - Create a new Azure Developer CLI [environment](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/faq#what-is-an-environment-name). The environment will contain all parameters that are required to deploy the application to Azure and connect to the OData service.
@@ -76,10 +76,15 @@
 
 - Specify the properties:
   ```
-   azd env set ODATA_URL "..."
-   azd env set ODATA_SAP_CLIENT "..."
-   azd env set ODATA_USERNAME "..."
-   azd env set ODATA_USERPWD "..."
+  azd env new [YOUR USER NAME HERE, e.g. mhp-1] 
+  azd env set AZURE_RESOURCE_GROUP [YOUR USER NAME HERE, e.g. mhp-1]
+  azd env set AZURE_SUBSCRIPTION_ID "..."
+  azd env set AZURE_LOCATION "westeurope"
+
+  azd env set ODATA_URL "..."
+  azd env set ODATA_SAP_CLIENT "..."
+  azd env set ODATA_USERNAME "..."
+  azd env set ODATA_USERPWD "..."
   ```
 
   If you want, confirm these values are written correctly by listing them:
@@ -97,9 +102,6 @@
     ```
     azd up
     ```
-
-
-
     :bulb: Behind the scenes, `azd up` will perform three steps for you:
     - `azd package`, to build and package your application code.
     - `azd provision`, to deploy the Azure resources as defined in the IaC artifacts.
