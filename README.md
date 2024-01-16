@@ -32,6 +32,8 @@ This repos encourages contributions and feedback via the [GitHub Issues](https:/
 | [Bart Delanghe](https://www.linkedin.com/in/bart-delanghe/)    | Microsoft |
 | [Thijs Zandvliet](https://www.linkedin.com/in/thijszandvliet/)  | Microsoft |
 | [Sebastian Ullrich](https://www.linkedin.com/in/sebastian-ullrich-677b36168/)| Microsoft |
+| [Matt Schlarb](https://www.linkedin.com/in/matt-schlarb/)   | Microsoft |
+| [Madalina Wagmann](https://www.linkedin.com/in/madalina-wagmann-sap-azure-specialist-pm/)   | Microsoft |
 | [Jeffrey Groneberg](https://www.linkedin.com/in/jeffrey-groneberg-84b47412/)| Microsoft |
 | [Bastian Ulke](https://www.linkedin.com/in/bastian-ulke/)     | Microsoft |
 | [Volker Buzek](https://www.linkedin.com/in/volkerbuzek/)     | SAP Mentor |
