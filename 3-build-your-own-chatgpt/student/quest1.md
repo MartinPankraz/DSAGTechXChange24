@@ -1,6 +1,6 @@
 # Quest 1 - Leveraging GPT to create images
 
-**[🏠Home](../README.md)** - [ Quest 2 >](student/quest2.md)
+**[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
 
 
 * Go to [Microsoft Designer](https://designer.microsoft.com/image-creator) to open the Microsoft Designer
@@ -33,6 +33,6 @@ From [How to use AI image prompts to generate art using DALL‑E](https://create
 
 ## Where to next?
 
-**[🏠Home](../README.md)** - [ Quest 2 >](student/quest2.md)
+**[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
 
 [🔝](#)

@@ -1,6 +1,6 @@
 # Quest 2 - Create a first ChatBot
 
-[ < Quest 1 ](student/quest1.md) - **[ Quest 3 > ](student/quest3.md)**
+[ < Quest 1 ](quest1.md) - **[ Quest 3 > ](quest3.md)**
 
 With this first experience, of what is possible with GPT, lets create a first chatbot that allows you to interact with a public webpage
 
@@ -126,6 +126,6 @@ Note: You could configure AAD or any other Oauth2 identity provider (like the SA
 
 
 ## Where to next?
-[ < Quest 1 ](student/quest1.md) - **[ Quest 3 > ](student/quest3.md)**
+[ < Quest 1 ](quest1.md) - **[ Quest 3 > ](quest3.md)**
 
 [🔝](#)

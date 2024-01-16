@@ -1,6 +1,6 @@
 # Quest 3 - Upload your own data
 
-[ < Quest 2 ](student/quest2.md) - **[ Quest 4 > ](student/quest4.md)**
+[ < Quest 2 ](quest2.md) - **[ Quest 4 > ](quest4.md)**
 
 Upload your own data
 In addition to leveraging Public websites, Copilot Studio can also access documents in private SharePoint libraries, or documents that have been uploaded before. 
@@ -24,6 +24,6 @@ wie war der Cloud Umsatz von SAP?
 ![Sign In](../media/quest3/05-MoreChats.png)
 
 ## Where to next?
-[ < Quest 2 ](student/quest2.md) - **[ Quest 4 > ](student/quest4.md)**
+[ < Quest 2 ](quest2.md) - **[ Quest 4 > ](quest4.md)**
 
 [🔝](#)
