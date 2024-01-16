@@ -20,7 +20,7 @@ Our journey will start from ...
 🌟
 🕒 30 mins
 
-## [Quest 1](student/quest1.md) - 
+## [Quest 1](student/quest1.md) - Using Gen AI to create images
 
 🌟🌟🌟🌟
 🕒 1 h
