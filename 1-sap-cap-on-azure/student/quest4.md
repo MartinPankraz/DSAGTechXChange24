@@ -16,11 +16,7 @@
 
   :construction: Adjust values.
 
-- :point_up: To not mess with your existing logins to Azure AD, open a new Private / Incognito browser window. 
-
-  ![](2024-01-12-07-46-31.png)
-
-- In the new private browser tab, go to the [Azure Portal (https://portal.azure.com)](https://portal.azure.com) and log in using the credentials you found above.
+- Open a new browser tab, go to the [Azure Portal (https://portal.azure.com)](https://portal.azure.com) and log in using the credentials you found above.
 
   :point_up: If you are asked to provide further security information, please click "Ask later" to skip.
 
@@ -37,22 +33,27 @@
 
 ## Login from your development terminal
 
-- Go back to your VSCode in your codespace. 
+:point_up: Two different CLIs
 
-- Open [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) in the private browser.
+- Go back to your VSCode in your codespace. To login in to both, the Azure CLI (`az`) and the Azure Developer CLI (`azd`).
 
-- Log in using Azure Developer CLI. Once the 9-character login code is displayed, copy that over to the login page you opened in the former step and select your account.
+- Log in using Azure CLI; follow the instructions to go confirm your identity in the browser.
+
+  ```
+  az login --use-device-code
+  ```
+
+  ![](2024-01-17-10-23-27.png)
+
+  ![](2024-01-17-10-24-53.png)
+
+  ![](2024-01-17-08-05-11.png)
+
+- Do the same exercise for the Azure Developer CLI. 
 
   ```
   azd auth login --use-device-code
   ```
-
-  ![](2024-01-12-08-05-54.png)
-
-  ![](2024-01-12-08-06-12.png)
-
-  :point_up: Once you completed the login procedure, you might need to hit Enter in the terminal.
-
 
 ## Setup your environment configuration
 
@@ -209,6 +210,97 @@
 - Open the application by clicking the link behing "Default domain" and do a first smoke test of your application.
 
   ![](2024-01-15-08-14-17.png)
+
+- Click 'BusinessPartnersLocal' to retrieve some data from the OData service.
+
+  ![](2024-01-17-19-07-04.png)
+
+
+## Further exploration
+
+### Inspecting the application log
+- As managed service, the "App Service" resource hosting your application comes with a lot of platform-managed capabilities. For example, you can easily inspect the log information written from your console. 
+
+  Typically, there are different paths to achieve the same goal. One way to view the application log is to open the Azure Portal, browse to App Service resource and open up the "Logstream" blade in the "Monitoring" section:
+
+  ![](2024-01-17-18-21-02.png)
+
+  For automation or if you feel more comfortable using the command-line interface (CLI), you can equally invoke the command 
+
+  ```
+  az webapp log tail --resource-group [YOUR RESOURCE GROUP NAME HERE] --name [YOUR APP SERVICE NAME HERE]
+  ```
+
+  :construction: Is there really no way to get a specific value out of the env? That would allow us to replace the [..] replaceholders with variables.
+
+### Inspect pre-defined dashboards
+
+- As part of the infrastructure provisioning step, any `azd` project will come with monitoring tooling built-in. The tooling is built on different services from the [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) family:
+
+  - [Application Insights](https://learn.microsoft.com/azure/azure-monitor/app/app-insights-overview?tabs=net)
+  - [Application Insights Dashboards](https://learn.microsoft.com/azure/azure-monitor/app/overview-dashboard)
+  - [Log Analytics](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-overview)
+
+  The setup comes with three basic dashboards that you can access via the portal or via `azd` commands:
+
+  - Main dashboard: 
+    ```
+    azd monitor --overview
+    ```
+    :construction: double-check; did not work for me.
+
+  - Live metrics dashboard:
+    ```
+    azd monitor --live
+    ```
+  - Log datasink:
+    ```
+    azd monitor --logs
+    ```
+
+This gives you a solid starting point for monitoring your application as well as troubleshooting it.
+
+
+### Connect to cloud-hosted PostgreSQL database
+
+- Open the Adminer interface again as you did in [quest 3](quest3.md).
+
+- In the Azure Portal, browse to the resource of type "Azure Cosmos DB for PostgreSQL Cluster" in your resource group; this resource represents your database cluster. Copy the FQDN specified as "Coordinator name" to your clipboard and paste in the "host" field of your Adminer login page.
+
+  ![](2024-01-17-19-01-15.png)
+
+- The secret password for the admin username has been stored in the "Azure Key Vault" resource in your resource group. An Azure Key Vault is the central storage location for all Key, Secrets and Certificates for applications hosted on the Azure cloud. Browse to your vault, open the "Secrets" blade and select item `kv-secret-cosmosdb-password`. 
+
+  ![](2024-01-17-19-04-02.png)
+
+  Klick the id of the "Current Version" and copy the secret value to your clipoard.
+
+  ![](2024-01-17-19-04-14.png)
+
+  ![](2024-01-17-19-04-36.png)
+
+- Login to your cloud-hosted database using Adminer
+
+  ![](2024-01-17-19-05-38.png)
+
+  ...and select table `businesspartnerlocal` and click select to verify data from OData service got loaded into the database:
+
+  ![](2024-01-17-19-08-31.png)
+
+  :point_up: If the table is empty, you might not yet have triggerd data population from the OData service by launching the BusinessPartnersLocal Fiori application from your application landing page.
+
+## Further remarks
+
+### Network segmentation and security
+
+In the last steps, you have seen that you can easily connect to your web application, the database and the key vault via public internet. We have selected this unbound access to simplify the setup for this demo. Effectively, you have a wide range of opportunities to protect your resources from unauthorized access by introducing network restrictions:
+
+- Service firewalls can be enabled for many services, including [Azure Cosmos DB for PostgreSQL](https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/howto-manage-firewall-using-portal) and [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/network-security).
+
+- With the help of [Private Endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview), Azure services can be assigned IP addresses from your internal virtual networks, thereby restricting any inbound access from public internet.
+
+- Finally, we have general guidelines on how to securely set up your network in the cloud in our [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/), [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/) and [Well-Architected Framework](https://learn.microsoft.com/en-gb/azure/well-architected/). For example [Secure and govern workloads with network-level segmentation](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation).
+
 
 
 

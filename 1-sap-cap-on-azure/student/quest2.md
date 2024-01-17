@@ -47,6 +47,10 @@ You have two options:
 
 - To confirm CLI tools are well set up, invoke following commands in terminal at the bottom of the VScode view:
 
+  :point_up: There are two different CLI tools that will be used in this tutorial:
+  - The [Azure Command-Line Interface (CLI) (`az`)](https://learn.microsoft.com/en-us/cli/azure/) is a set of commands used to create and manage Azure resources.
+  - The [Azure Developer CLI (`azd`)](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview) is an open-source tool that helps you getting your application from local development environment to Azure.
+
   ```
   az version
   ```
