@@ -23,6 +23,10 @@ vergleiche das Quartalsergebnis von SAP mit Microsoft
 wie war der Cloud Umsatz von SAP?
 ![Sign In](../media/quest3/05-MoreChats.png)
 
+
+TODO: Publish website wie in Quest 2.
+
+
 ## Where to next?
 [ < Quest 2 ](quest2.md) - **[ Quest 4 > ](quest4.md)**
 
