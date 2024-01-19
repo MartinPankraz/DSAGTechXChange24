@@ -8,7 +8,9 @@ You will be expanding your ABAP developer horizon and ultimately be equipped to 
 
 ## 🧙🏾‍♀️Epic Quests
 
-Our journey will start from ...
+Our journey will start from SAP S/4HANA Cloud ABAP environment (aka. Embedded Steampunk) but your learnings will be applicable to BTP ABAP environment too. Also the ABAP SDKs used are usable with classic ABAP as well.
+
+This lab was conducted with S/4HANA 2022.
 
 > [!NOTE]
 >🏋🏽‍♂️**Difficulty meter** (1 star = walk in the park | 5 stars = squeeze your brains out ): 🌟🌟🌟🌟🌟
@@ -20,41 +22,32 @@ Our journey will start from ...
 ## Meet your Mentors, learn more about the journey and kick-off
 
 🌟
-🕒 30 mins
+🕒 15 mins
 
-## [Quest 1](student/quest1.md) - 
+## [Quest 1](student/quest1.md) - Setting up
 
-🌟🌟🌟🌟
-🕒 1 h
-
-## [Quest 2](student/quest2.md) - 
-
-🌟🌟🌟
-🕒 45 mins
-
-⏳Take a natural break here if suitable.
-
-## [Quest 3](student/quest3.md) - 
-
-🌟🌟🌟🌟
-🕒 1,5 h
-
-## [Quest 4](student/quest4.md) - 
-
-🌟
-🕒 30 mins
-
-## [Quest 5](student/quest5.md) - 
+You will setup your environment ready, start Eclipse with ABAP Development tools and login to your ABAP Cloud environment.
 
 🌟🌟
-🕒 1 h
-
-## [Quest 6](student/quest6.md) - 
-
-🌟
 🕒 30 mins
 
-Approach the last quest with a bang
+## [Quest 2](student/quest2.md) - Generate RAP service and Fiori UI
+
+You will generate an SAP RESTful ABAP Programming model service based of a table design and a Fiori UI for it to maintain values.
+
+🌟🌟
+🕒 15 mins
+
+## [Quest 3](student/quest3.md) - Develop your AI prompt
+
+Before you start using the Microsoft AI SDK for SAP, you will play and fine-tune your prompt on the Azure AI Studio.
+
+🌟🌟🌟🌟
+🕒 45 mins
+
+## [Quest 4](student/quest4.md) - Add Microsoft AI SDK for SAP to your project
+
+Once you are happy with your prompt, you will add the Microsoft AI SDK for SAP to your project and use it to generate the product description during the create process.
 
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
