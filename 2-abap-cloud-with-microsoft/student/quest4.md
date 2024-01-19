@@ -61,7 +61,7 @@ DATA:
 
         TRY.
             data(sdk_instance) = zcl_peng_azoai_sdk_factory=>get_instance( )->get_sdk(
-                                                                      api_version = '2023-07-01-preview'
+                                                                      api_version = '2023-03-15-preview'
                                                                       api_base    = 'https://to-be-replaced.openai.azure.com'
                                                                       api_type    = zif_peng_azoai_sdk_constants=>c_apitype-azure
                                                                       api_key     = 'get from dungeon master'
