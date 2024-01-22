@@ -11,7 +11,9 @@ In addition to leveraging Public websites, Copilot Studio can also access docume
 * Upload a private document in Txt or PDF format
 Examples can be found here:
 https://www.sap.com/investors/en/reports.html?sort=latest_desc&tab=reports#reports
+
 https://www.microsoft.com/en-us/Investor/annual-reports.aspx
+
 * 
 ![Sign In](../media/quest3/02-UploadDocuments.png)
 
