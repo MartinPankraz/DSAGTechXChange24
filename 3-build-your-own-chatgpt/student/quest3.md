@@ -22,9 +22,9 @@ Examples can be found here:
 > [!NOTE]
 > Even if the document has been uploaded in English, you can still ask it with different languages
 ![Sign In](../media/quest3/04-ChatWithYourData.png)
-e.g. Wie war das Quartalsergebnis von SAP?
-vergleiche das Quartalsergebnis von SAP mit Microsoft
-wie war der Cloud Umsatz von SAP?
+e.g. "Wie war das Quartalsergebnis von SAP?" oder
+"vergleiche das Quartalsergebnis von SAP mit Microsoft" und 
+"wie war der Cloud Umsatz von SAP?"
 ![Sign In](../media/quest3/05-MoreChats.png)
 
 ## Where to next?
