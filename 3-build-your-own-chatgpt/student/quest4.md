@@ -11,7 +11,7 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 > Note: You can take a look at the Power Automate Flow here xxx. Feel free to rebuild it at a later time following these xxx instructions in your own environment. 
 
 
-* Go to TOpics & Plugins -> Systems and Disable the "Conversational boosting"
+* Go to Topics & Plugins -> Systems and Disable the "Conversational boosting"
 ![Disable Boosting](../media/quest4/01-DisabledBoosting.png)
 
 * Select the Fallback topic and under the first Trigger, click on "+" and from Advanced -> Select "Send HTTP request"
