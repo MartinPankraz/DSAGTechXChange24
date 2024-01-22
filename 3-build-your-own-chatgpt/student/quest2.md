@@ -17,7 +17,7 @@ With this first experience, of what is possible with GPT, lets create a first ch
 * If required click on Ask Later to skip the additional authentication steps
 ![Sign In](../media/quest2/03-AskLater.png)
 
-* Slected Stay signed in
+* Select Stay signed in
 ![Sign In](../media/quest2/04-StaySignIn.png)
 
 * Click on *Start Free Trial*
