@@ -12,7 +12,7 @@ Examples can be found here:
 - https://www.sap.com/investors/en/reports.html?sort=latest_desc&tab=reports#reports
 - https://www.microsoft.com/en-us/Investor/annual-reports.aspx
 
-* Upload a private document in Txt or PDF format
+* Upload a private document in Txt or PDF format with Drag&Drop
  ![Sign In](../media/quest3/02-UploadDocuments.png)
 
 * Repeate the same for additional documents
