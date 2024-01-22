@@ -18,6 +18,9 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 ![Disable Boosting](../media/quest4/02-AddHTTPAction.png)
 
 * Change the Method to "Post"
+```http
+https://prod-117.westus.logic.azure.com:443/workflows/2b7d54acc9e94c3b93dee086b4d28a96/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rez20vuZsRsAa3glEQGqzjQj5Enn5UELQEQxcFJP2rY
+```
 ![Disable Boosting](../media/quest4/03-SelectMethod.png)
 
 * Under "Headers and body" Click on Edit and on the right hand side, select "Raw content" from the drop-box
