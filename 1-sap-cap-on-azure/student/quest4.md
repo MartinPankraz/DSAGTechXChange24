@@ -22,9 +22,9 @@ In this quest, you will bring your application to the Azure cloud to make it ava
   - Select the "Resoruce groups" button from the landing page.
 
 > [!TIP]
-> <details><summary>If you don't know what a [resource group](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) is...</summary>
+> <details><summary>If this is the first time you hear the term 'resource group'...</summary>
 >  
-> ...you might want to know that it is a kind of container that will hold all resources that constitute your application -- such as the database, the virtual networking components and the Azure Function to host your application code.
+> ...you might want to know that a [resource group](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) is a kind of container that will hold all resources that constitute your application -- such as the database, the virtual networking components and the Azure Function to host your application code.
 > 
 > </details>
 
@@ -253,7 +253,7 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Further exploration
 
-> [!IMPROTANT]
+> [!IMPORTANT]
 > The following sections are optional. Please select where you want to go deeper depending on your progress, remaining time and your personal interest and feel free to continue with quest 5 if you prefer.
 
 ### (optional) Inspect pre-defined dashboards
@@ -313,7 +313,7 @@ To store application data, an instance of [Azure Cosmos DB for PostgreSQL docume
 
   ![](2024-01-17-19-08-31.png)
 
-> [!IMPORTANT]
+> [!TIP]
 > If the table is empty, you might not yet have triggerd data population from the OData service by launching the BusinessPartnersLocal Fiori application from your application landing page.
 
 
