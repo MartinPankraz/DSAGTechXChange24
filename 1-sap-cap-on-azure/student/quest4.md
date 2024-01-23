@@ -1,4 +1,4 @@
-# Quest 4 - Deploy to Azure
+# Quest 4 - Deploy your application to Azure
 
 In this quest, you will bring your application to the Azure cloud to make it available to your favorite users. You will get credentials to log in to Azure's management portal and deploy all components to ...
 - ...host your application,

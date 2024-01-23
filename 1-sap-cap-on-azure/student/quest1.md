@@ -1,5 +1,4 @@
-# Quest 1 - Understand what we want to build.
-
+# Quest 1 - Understand what we want to build
 :construction: Add Architecture overview and description here.
 
 
