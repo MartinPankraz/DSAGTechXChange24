@@ -2,7 +2,7 @@
 
 In this quest, you will prepare your development environment for this tutorial. You will therefore GitHub repository that contains the code for our project. Instead of installing a bunch of tools on your own computer, you will leverage [GitHub Codespaces](https://github.com/features/codespaces) to create a cloud-hosted development environment with all prerequesites already set up.
 
-## Prepare your fork.
+## Create your fork
 
 - Log in to Github
 
@@ -26,7 +26,8 @@ You have two options:
 
   GitHub Codespaces allows you to use a preconfigured development environment hosted on GitHub. It will include all required tools and a clone of the repository you will be working with. You can access this development environment either via a browser or using the VS Code installation on your developer machine.
 
-:point_up: We will focus on the GitHub Codespace way going forward.
+> [!IMPORTANT]
+> We will focus on the GitHub Codespace way going forward.
 
 ### Initialize your codespace
 
@@ -36,7 +37,8 @@ You have two options:
 
   ![](2024-01-10-14-57-12.png)
 
-  :point_up: Every GitHub user account comes with a [free plan](https://github.com/features/codespaces) to run Codespaces with 2 vCores for up to 60 hours a month.
+> [!TIP]
+> Every GitHub user account comes with a [free plan](https://github.com/features/codespaces) that will allow running codespaces for a limited amount of time.
 
 - Wait a couple of seconds until deployment of your code space has terminated:
 
@@ -49,27 +51,32 @@ You have two options:
 
   ![](2024-01-10-15-01-13.png)
 
-  :bulb: If you are not yet familiar with VS Code, you might want to inspect the different panes:
-  - The vertical bar on the left side allows you to swith between a file Explorer, a search area as well as control elements to control your git operations (like staging and commiting changes).
-  - On the bottom of the page, you have the option to open a Terminal view; different command line interpreters (bash and PowerShell) are available to invoke commands and use the CLI tools available within your GitHub Codespace.
+> [!TIP]
+> <details><summary>If you are not yet familiar with VS Code...</summary>
+>  
+> ...you might want to inspect the different panes:
+>  - The vertical bar on the left side allows you to swith between a file Explorer, a search area as well as control elements to control your git operations (like staging and commiting changes).
+> - On the bottom of the page, you have the option to open a Terminal view; different command line interpreters (bash and PowerShell) are available to invoke commands and use the CLI tools available within your GitHub Codespace.
+> 
+> </details>
 
-  :point_up: We will use the bash interpreter in the the remainder of this tutorial.
 
-- (:bulb:) If you are interested to see how GitHub knows which components it has to deploy into your codespace, you may want to browse file `.devcontainer/devcontainer.json`. It lists CLI tools such as `azure-cli` (in the `features` section) as well as extensions for VS Code (in the section `customizations / vscode / extensions`).
+> [!TIP]
+> <details><summary>If you are interested to see how GitHub knows which components it has to deploy into your codespace...</summary>
+>  
+> ...you may want to browse file `.devcontainer/devcontainer.json`. It lists CLI tools such as `azure-cli` (in the `features` section) as well as extensions for VS Code (in the section `customizations / vscode / extensions`).
+> 
+> </details>
+
+> [!IMPORTANT]
+> We will use the bash interpreter in the the remainder of this tutorial.
 
 - To confirm CLI tools are well set up, invoke following commands in terminal at the bottom of the VS Code view:
-
-  :point_up: There are two different CLI tools that will be used in this tutorial:
-  - The [Azure Command-Line Interface (CLI) (`az`)](https://learn.microsoft.com/en-us/cli/azure/) is a set of commands used to create and manage Azure resources.
-  - The [Azure Developer CLI (`azd`)](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview) is an open-source tool that helps you getting your application from local development environment to Azure.
 
   ```
   az version
   ```
-  and
-  ```
-  azd version
-  ```
+  
   The output should look like that:
   ```
     @username ➜ /workspaces/app-service-javascript-sap-cap-quickstart (main) $ az version
@@ -79,17 +86,17 @@ You have two options:
     "azure-cli-telemetry": "1.1.0",
     "extensions": {}
     }
-    @username ➜ /workspaces/app-service-javascript-sap-cap-quickstart (main) $ azd version
-    azd version 1.5.1 (commit 3856d1e98281683b8d112e222c0a7c7b3e148e96)
   ```
 
   ![](2024-01-10-15-10-03.png)
 
-  :point_up: When showing output of CLI interaction, we will in most cases show the text output and avoid adding the respective screenshots. Please don't worry if coloring and formatting slightly differ.
+> [!IMPORTANT]
+> When showing output of CLI interaction, we will in most cases show the text output and avoid adding the respective screenshots. Please don't worry if coloring and formatting slightly differ.
 
 ### (Optional) Use your local VS Code installation to connect to your codespace from your developer machine.
 
-:point_up: In the interest of time, we recommend you to stay with the browser-based Codespace UI and skip the following steps. If you want to come back at a later point in time, feel free to follow up here to connect your local VS Code with a GitHub Codespace.
+> [!IMPORTANT]
+> In the interest of time, we recommend you to stay with the browser-based Codespace UI and skip the following steps. If you want to come back at a later point in time, feel free to follow up here to connect your local VS Code with a GitHub Codespace.
 
 - Start the VS Code deployed on your developer machine.
 
