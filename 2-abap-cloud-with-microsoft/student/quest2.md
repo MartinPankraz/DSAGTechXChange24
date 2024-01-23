@@ -6,7 +6,7 @@
 
 ## Introduction
 
-In this quest, you will generate an SAP RESTful ABAP Programming model service based of a table design and a Fiori UI for it to maintain values.
+In this quest, you will generate an SAP RESTful ABAP Programming model service based of a provided table definition. Moreover you will generate a Fiori UI to maintain values.
 
 ## The path
 
@@ -14,7 +14,10 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 1. Navigate to your pre-prepared package `ZDSAG_MSFT_AI_##` and create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
 2. Find it under Dictionary -> Database Tables and double-click on it.
-3. Use the table definition below to create the table. Make sure to replace the ## with your assigned number.
+
+![Screenshot of table create experience](../media/quest2-1.png)
+
+3. Use the table definition below to enhance the initial table definition. Make sure to replace the ## with your assigned number.
 
 ```abap
 @EndUserText.label : 'Table holding Products with GenAI descriptions created'
@@ -81,14 +84,14 @@ define table zprod_w_ai_## {
 | Binding Type | `OData V4 - UI` |
 
 8. Click `Finish` to generate the service.
-9. Choose existing transport request `S4HK902218` with Description "DSAG-TechXChange" and click `OK`.
+9. Choose existing transport request `S4HK902222` with Description "DSAG-TechXChange" and click `OK`.
 
 > [!IMPORTANT]
 > If you encounter consistency or naming errors during object generation, you need to go back, delete the generated objects, and start over. Make sure to use the correct naming convention for your objects.
 
 ### Enhance the raw service definition
 
-The raw Fiori app has no labels and no descriptions. We will add them now.
+With the current state of embedded steampunk the newly generated raw Fiori app has no labels and no descriptions. We will add them now.
 
 1. Open the metadata extension `ZC_PROD_W_AI_##` object and add the annotations below (don't forget to replace the ## with your number).
 
@@ -193,10 +196,8 @@ annotate view ZC_PROD_W_AI_## with
 
 2. Open the behavior definition `ZR_PROD_W_AI_##` object and set your primary key to be enumerated automatically. Otherwise, you will get errors once you try to create a second product entry on Fiori.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Pay attention to the method `GenerateDescriptionWithAI`. This is where the magic happens. We will implement it in the next steps.
-
-```abap
 
 ```abap
 managed implementation in class ZBP_PROD_W_AI_## unique;
@@ -256,16 +257,16 @@ authorization master( global )
 1. Navigate from your package `ZDSAG_MSFT_AI_##` to `Business Services -> Service Bindings` and select your newly generated OData service binding.
 2. Click `Publish` under Services -> Local Service Endpoint.
 
-![Screenshot of preview screen trigger](../media/quest2-1.png)
+![Screenshot of preview screen trigger](../media/quest2-2.png)
 
 3. Select the Entity Set and click on `Preview` to open the Fiori preview.
 
-> [!NOTE]
-> Deal with the dummy domain and replace with the IP address you got from your dungeon master earlier. Ignore the SSL certificate error and continue. Provide your credentials to logon to the Fiori preview.
+> [!WARNING]
+> Ad-hoc lab systems are often not fully configured for ease of effort. Deal with the dummy domain challenge by replacing with the IP address you got from your dungeon master earlier. Ignore the SSL certificate error and continue. Provide your credentials to logon to the Fiori preview.
 
-4. On the spawned browser session, create a new product entry and save it.
+4. On the spawned browser session, create a new product entry, and save it.
 
-![Screenshot of preview screen creating a new product without description](../media/quest2-2.png)
+![Screenshot of preview screen creating a new product without description](../media/quest2-3.png)
 
 5. Verify that the product was created successfully from the overview pane by navigating back and clicking the blue `Go` button.
 
