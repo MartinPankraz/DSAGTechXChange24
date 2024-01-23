@@ -36,7 +36,7 @@ So far, your application is open to anyone on the internet and does not require 
   ```
 
 > [!TIP]
-> <details><summary>While the infrastructure is provisioned...</summary>
+> <details><summary>While the infrastructure is being provisioned...</summary>
 >  
 > ...you might want to take a glimpse at the code to follow the data flow of this parameter:
 > - We have added the parameter `APP_USE_ENTRAID_AUTHENTICATION` to the AZD environment with value `true`.
