@@ -1,12 +1,13 @@
-# Quest 3 - The inner dev loop: Running the code in your dev environment.
+# Quest 3 - The inner dev loop: Run your app in your dev environment
 
-:construction: Add a link to explain the "inner dev loop".
+Even when teams build a cloud-native application, the individual developers need their own development to code and test changes in isolation. The procedure of coding, testing, coding, testing (and so on) is often called the "inner dev loop" and will be repeated by a developer until a task is finalized, changes a submitted to the code repository to get shipped to end customers (which will be up to the "outer dev loop").
 
-:construction: Removed step "Start Docker engine locally". Fine?
+In this quest, you will set up and test your own development environment for your own inner dev loop. You will start by setting a couple of environment parameters to connect to the (external) OData service, use [docker](https://www.docker.com/) to spin up a temporary database and then deploy the [CAP application](https://cap.cloud.sap/docs/about/).
 
 :construction: Update Versions? (npm)
   ![](2024-01-11-09-03-44.png)
 
+:construction: Update screenshots from Browser VS Code.
 
 ## Prepare your environment configuration
   
@@ -15,12 +16,12 @@
   cd ./src
   ```
 
-- Based on the respective file in the `templates` directory, create your own `.env` file. It will contain the individual parameters for your developoment configuration. 
+- Based on the sample file in the `templates` directory, create your own `.env` file. It will contain the individual parameters for your developoment configuration. 
   ```
   cp ../templates/.env ./.env
   ```
   
-- Open your `.env` file in VScode, and update the following parameters:
+- Open your `.env` file in VS Code, and update the following parameters:
   - `ODATA_URL`, set to value provided by your coaches.
   - `SAP_CLIENT`, set to value provided by your coaches.
   - `ODATA_USERNAME`, set to value provided by your coaches.
@@ -47,16 +48,16 @@
 
 - Inspect exposed and forwarded ports. 
 
-  In VSCode, open the Ports tab; it will show you forwardings for the two ports specified in `pg.yml`. 
+  In VS Code, open the Ports tab; it will show you forwardings for the two ports specified in `pg.yml`. 
 
   ![](2024-01-11-08-12-17.png)
 
-  :point_up: If you use VSCode in your browser, the 'Forwarded Address' will be a FQDN like `https://automatic-disco-qx64496pq4f4r-8080.app.github.dev/` instead of `127.0.0.1:8080` as shown in this screenshot.
+  :point_up: If you use VS Code in your browser, the 'Forwarded Address' will be a FQDN like `https://automatic-disco-qx64496pq4f4r-8080.app.github.dev/` instead of `127.0.0.1:8080` as shown in this screenshot.
 
 
 - Open the DB admin interface. 
 
-  Open Adminer in your browser by pressing the 'Open in Browser' in the Ports tab of VScode. In the new tab, log in to the database running in your docker container by using the credentials specified in `pg.yml`. 
+  Open Adminer in your browser by pressing the 'Open in Browser' in the Ports tab of VS Code. In the new tab, log in to the database running in your docker container by using the credentials specified in `pg.yml`. 
   
   :point_up: Don't miss to specify `PostgreSQL` as system type.
 
@@ -81,11 +82,11 @@
 
   ![](2024-01-11-08-52-07.png)
 
-  Using the Ports tab of your VSCode, open the application via its exposed port 4004.
+  Using the Ports tab of your VS Code, open the application via its exposed port 4004.
 
   ![](2024-01-11-08-53-02.png)
 
-  To test integration with the ODATA provider, click `BuisinessPartners` or `Fiori preview` and follow your terminal in VSCode. 
+  To test integration with the ODATA provider, click `BuisinessPartners` or `Fiori preview` and follow your terminal in VS Code. 
   
   ![](2024-01-11-09-00-54.png)
   

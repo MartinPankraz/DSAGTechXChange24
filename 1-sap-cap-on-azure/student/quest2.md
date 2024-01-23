@@ -1,5 +1,6 @@
 # Quest 2 - Prepare your development environment
 
+In this quest, you will prepare your development environment for this tutorial. You will therefore GitHub repository that contains the code for our project. Instead of installing a bunch of tools on your own computer, you will leverage [GitHub Codespaces](https://github.com/features/codespaces) to create a cloud-hosted development environment with all prerequesites already set up.
 
 ## Prepare your fork.
 
@@ -16,11 +17,16 @@
 ## Prepare your development environment
 
 You have two options:
-- Use  [GitHub Codespaces](https://github.com/features/codespaces): GitHub Codespaces allows you to use a development environment hosted by GitHub. You can access this development environment either via a browser or using the VSCode installation on your developer machine. (:construction: Better explanation / more pros and cons.)
 
-- Clone the repository to your development machine. Please only select this path if you are confident to be all set on your dev machine. (:construction: What do they need to be 'all set'.?)
+- Do it "the conventional way" and set up your development environment on your machine. 
 
-  :point_up: We will not explain this path in the remainder of this tutorial.
+  This will require you to install all the tools needed to build and deploy the application -- such as [Node.js — Download](https://nodejs.org/en/download/), [Azure Command-Line Interface (CLI)](https://learn.microsoft.com/en-us/cli/azure/) and the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview). It will also require you to set up and configure your [Git](https://git-scm.com/) and clone the repository.
+
+- Do it "the easy way and use [GitHub Codespaces](https://github.com/features/codespaces).
+
+  GitHub Codespaces allows you to use a preconfigured development environment hosted on GitHub. It will include all required tools and a clone of the repository you will be working with. You can access this development environment either via a browser or using the VS Code installation on your developer machine.
+
+:point_up: We will focus on the GitHub Codespace way going forward.
 
 ### Initialize your codespace
 
@@ -30,6 +36,8 @@ You have two options:
 
   ![](2024-01-10-14-57-12.png)
 
+  :point_up: Every GitHub user account comes with a [free plan](https://github.com/features/codespaces) to run Codespaces with 2 vCores for up to 60 hours a month.
+
 - Wait a couple of seconds until deployment of your code space has terminated:
 
   ![](2024-01-10-14-57-59.png)
@@ -37,15 +45,19 @@ You have two options:
   Following the 'logs', you can see how GitHub prepares the your development environment by installing all prerequesites for your development cycle.
 
 
-- Once your dev container is available, you'll see VScode with your repo opened in your browser: 
+- Once your dev container is available, you'll see VS Code with your repo opened in your browser: 
 
   ![](2024-01-10-15-01-13.png)
 
-  :construction: Explain areas: browser, file editing area, terminal.
+  :bulb: If you are not yet familiar with VS Code, you might want to inspect the different panes:
+  - The vertical bar on the left side allows you to swith between a file Explorer, a search area as well as control elements to control your git operations (like staging and commiting changes).
+  - On the bottom of the page, you have the option to open a Terminal view; different command line interpreters (bash and PowerShell) are available to invoke commands and use the CLI tools available within your GitHub Codespace.
 
-- (:bulb:) If you are interested to see how GitHub knows which components it has to deploy into your codespace, you may want to browse file `.devcontainer/devcontainer.json`. It lists CLI tools such as `azure-cli` (in the `features` section) as well as extensions for VSCode (in the section `customizations / vscode / extensions`).
+  :point_up: We will use the bash interpreter in the the remainder of this tutorial.
 
-- To confirm CLI tools are well set up, invoke following commands in terminal at the bottom of the VScode view:
+- (:bulb:) If you are interested to see how GitHub knows which components it has to deploy into your codespace, you may want to browse file `.devcontainer/devcontainer.json`. It lists CLI tools such as `azure-cli` (in the `features` section) as well as extensions for VS Code (in the section `customizations / vscode / extensions`).
+
+- To confirm CLI tools are well set up, invoke following commands in terminal at the bottom of the VS Code view:
 
   :point_up: There are two different CLI tools that will be used in this tutorial:
   - The [Azure Command-Line Interface (CLI) (`az`)](https://learn.microsoft.com/en-us/cli/azure/) is a set of commands used to create and manage Azure resources.
@@ -73,11 +85,13 @@ You have two options:
 
   ![](2024-01-10-15-10-03.png)
 
-  :construction: Highlight that we won't screenshot Terminal output (but make it code blocks.) going forward.
+  :point_up: When showing output of CLI interaction, we will in most cases show the text output and avoid adding the respective screenshots. Please don't worry if coloring and formatting slightly differ.
 
-#### (Optional) Use your local VSCode installation to connect to your codespace from your developer machine.
+### (Optional) Use your local VS Code installation to connect to your codespace from your developer machine.
 
-- Start the VSCode deployed on your developer machine.
+:point_up: In the interest of time, we recommend you to stay with the browser-based Codespace UI and skip the following steps. If you want to come back at a later point in time, feel free to follow up here to connect your local VS Code with a GitHub Codespace.
+
+- Start the VS Code deployed on your developer machine.
 
 - Make sure you have the extension "GitHub Codespaces" installed.
 
@@ -87,7 +101,7 @@ You have two options:
   
   ![](2024-01-10-15-32-35.png)
 
-- Login to GitHub from VScode.
+- Login to GitHub from VS Code.
 
   ![](2024-01-10-15-33-27.png)
 
@@ -95,7 +109,7 @@ You have two options:
 
   ![](2024-01-10-15-34-21.png)
 
-- See how VScode refreshes and loads your repo content in your local VScode window.
+- See how VS Code refreshes and loads your repo content in your local VS Code window.
 
 - :bulb: Open a new Terminal and run `az version` and `azd version`.
 
