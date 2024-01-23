@@ -1,13 +1,11 @@
 # Quest 3 - The inner dev loop: Run your app in your dev environment
 
-Even when teams build a cloud-native application, the individual developers need their own development to code and test changes in isolation. The procedure of coding, testing, coding, testing (and so on) is often called the "inner dev loop" and will be repeated by a developer until a task is finalized, changes a submitted to the code repository to get shipped to end customers (which will be up to the "outer dev loop").
+Even when teams build a cloud-native application, the individual developers need their own development to code and test changes in isolation. The procedure of coding, testing, coding, testing (and so on) is often called the "inner dev loop" and will be repeated by a developer until a task is finalized and changes are submitted to the code repository to get shipped to end customers (which will be up to the "outer dev loop").
 
 In this quest, you will set up and test your own development environment for your own inner dev loop. You will start by setting a couple of environment parameters to connect to the (external) OData service, use [docker](https://www.docker.com/) to spin up a temporary database and then deploy the [CAP application](https://cap.cloud.sap/docs/about/).
 
 :construction: Update Versions? (npm)
   ![](2024-01-11-09-03-44.png)
-
-:construction: Update screenshots from Browser VS Code.
 
 ## Prepare your environment configuration
   
@@ -21,17 +19,15 @@ In this quest, you will set up and test your own development environment for you
   cp ../templates/.env ./.env
   ```
   
-- Open your `.env` file in VS Code, and update the following parameters:
-  - `ODATA_URL`, set to value provided by your coaches.
-  - `SAP_CLIENT`, set to value provided by your coaches.
-  - `ODATA_USERNAME`, set to value provided by your coaches.
-  - `ODATA_USERPWD`, set to value provided by your coaches.
+- Open your `.env` file in VS Code, and update the following parameters. Get the new values from the link provided by your coaches. 
+  - `ODATA_URL`, set to value `odata-url-host` in section `sap-cap-on-azure`.
+  - `SAP_CLIENT`, set to value `odata-sap-client` in section `sap-cap-on-azure`.
+  - `ODATA_USERNAME`, set to value `odata-username` in section `sap-cap-on-azure`.
+  - `ODATA_USERPWD`, set to value `odata-userpwd` in section `sap-cap-on-azure`.
 
   (Please leave all remaining properties unchanged.)
 
-  :construction: Will they get these credentials from the REST endpoint?
-
-  :construction: Do we want to clean up the `.env` file (are there any obsolete properties)?
+  :construction: Do we want to clean up the `.env` file (are there any obsolete properties, re-order? `ODATA_` prefix for SAP_CLIENT?)?
 
 ## Deploy your CAP application 
 
@@ -42,28 +38,31 @@ In this quest, you will set up and test your own development environment for you
   docker-compose -f pg.yml up -d
   ```
 
-  :bulb: This command uses docker compose to run two different containers. If you are not yet familiar with the syntax of docker compose files, you might want to inspect `pg.yml` to see how...
-  - ...a container named `db` is created to run the PostgreSQL database, based on container image `postgres:16-alpine` (lines 2-11) and with database, user name and password specified by the properties in lines 6-8.
-  - ...a container named `adminer` (lines 12-16); it will export port `8080` to make the container accessible from external networks.
+> [!TIP]
+> <details><summary>If you are not yet familiar with docker compose...</summary>
+>  
+> ...you might want to know that [Docker compose](https://docs.docker.com/compose/) is a tool to run applications consisting of multiple containers. You might want to inspect `pg.yml` to see how...
+>  - ...a container named `db` is created to run the PostgreSQL database, based on container image `postgres:16-alpine` (lines 2-11) and with database, user name and password specified by the properties in lines 6-8.
+>  - ...a container named `adminer` (lines 12-16); it will export port `8080` to make the container accessible from external networks.
+> 
+> </details>
 
 - Inspect exposed and forwarded ports. 
 
   In VS Code, open the Ports tab; it will show you forwardings for the two ports specified in `pg.yml`. 
 
-  ![](2024-01-11-08-12-17.png)
+  ![](2024-01-23-18-41-07.png)
 
-  :point_up: If you use VS Code in your browser, the 'Forwarded Address' will be a FQDN like `https://automatic-disco-qx64496pq4f4r-8080.app.github.dev/` instead of `127.0.0.1:8080` as shown in this screenshot.
+- Open Adminer. 
 
-
-- Open the DB admin interface. 
-
-  Open Adminer in your browser by pressing the 'Open in Browser' in the Ports tab of VS Code. In the new tab, log in to the database running in your docker container by using the credentials specified in `pg.yml`. 
+  [Adminer](https://www.adminer.org/) (the predecessor of phpMyAdmin) is tool to manage a variety of different databases. In line for port `8080`, click 'Open in Browser' in the "Forwarded Address" column in VS Code. In the new tab, log in to the database running in your docker container by using the credentials specified in `pg.yml`. 
   
-  :point_up: Don't miss to specify `PostgreSQL` as system type.
-
   ![](2024-01-11-08-19-40.png)
 
   Note there are no resources defined yet.
+
+> [!IMPORTANT]
+> Don't miss to specify `PostgreSQL` as system type.
 
 - Compile the node.js application and install in local package repository.
 
@@ -78,29 +77,38 @@ In this quest, you will set up and test your own development environment for you
   cds watch
   ```
 
-  This will populate the PostgreSQL database; open the Adminer interface and / or refresh the view. See that four tables have been created and partially populated with initial data (e.g., `catalogservice_books`):
+  Example output:
+  ```
+  $ cds watch
+  [cds] - loading server from { file: 'server.js' }
+  [cds-plugin-ui5] [debug] bootstrap
+  
+  [...]
 
-  ![](2024-01-11-08-52-07.png)
+  [cds] - server listening on { url: 'http://localhost:4004' }
+  [cds] - launched at 1/23/2024, 5:46:49 PM, version: 7.4.0, in: 5.738s
+  ```
+
+  This will populate the PostgreSQL database; open the Adminer interface and / or refresh the view. See that some tables have been created and partially populated with initial data (e.g., `cds_model`):
+
+  ![](2024-01-23-18-49-26.png)
 
   Using the Ports tab of your VS Code, open the application via its exposed port 4004.
 
-  ![](2024-01-11-08-53-02.png)
+  ![](2024-01-23-18-49-52.png)
 
-  To test integration with the ODATA provider, click `BuisinessPartners` or `Fiori preview` and follow your terminal in VS Code. 
+  To test integration with the ODATA provider, click `BuisinessPartnersLocal` or `Fiori preview` and follow your terminal in VS Code. 
   
-  ![](2024-01-11-09-00-54.png)
+  ![](2024-01-23-18-51-18.png)
   
-  On first click, you can track the change to the REST endpoint and see the results in the browser (after that, data will be cached in the PostgreSQL db):
+  On first click, you can track the call to the REST endpoint and see the results in the browser (after that, data will be cached in the PostgreSQL db):
 
   ![](2024-01-11-09-02-10.png)
 
   ```
-  [odata] - > READ BusinessPartners {
-    '$count': 'true',
-    '$select': 'AcademicTitle,AdditionalLastName,BirthDate,BusPartNationality,  BusinessPartner,BusinessPartnerBirthName,BusinessPartnerBirthplaceName,  BusinessPartnerCategory,BusinessPartnerIsBlocked,BusinessPartnerType,  BusinessPartnerUUID,FirstName,IsFemale,IsMale,Language,LastChangeDate,  LastChangeTime,LastChangedByUser,LastName,MiddleName',
-    '$skip': '0',
-    '$top': '30'
-  }
+  [odata] - GET /odata/v4/api-business-partner/BusinessPartnersLocal 
+  [cache] - retrieved 0 Business Partners from "cache"
+  [cache] - caching Business Partners...
   [cds] - connect to s4_bp > odata-v2 {
     url: 'https://...',
     authentication: '...',
@@ -111,9 +119,11 @@ In this quest, you will set up and test your own development environment for you
     queries: { 'sap-client': '...' },
     queryParameters: { 'sap-client': '...' }
   }
+  [cache] - retrieved and "cached" 729 Business Partners from S/4
+  }
   ```
   
-  :construction: Books view won't show up anything because the default view does not contain columns. That might be confusing. Do we want to change that?
+  :construction: Fiori view did not show up.
 
 ## Where to next?
 

@@ -9,20 +9,24 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Explore the Azure Portal 
 
-- Open the Rest Endpoint and find values `azure_username` and `azure_password`.
+- Open the Rest Endpoint and find values `azure-username` and `azure-password`.
 
-  :construction: Add URL, adjust values.
+- Open a new browser tab, go to the [Azure Portal (https://portal.azure.com)](https://portal.azure.com) and log in using these credentials.
 
-- Open a new browser tab, go to the [Azure Portal (https://portal.azure.com)](https://portal.azure.com) and log in using the credentials you found above.
-
-  :point_up: If you are asked to provide further security information, please click "Ask later" to skip.
+> [!IMPORTANT]
+> If you are asked to provide further security information, please click "Ask later" to skip.
 
 - Navigate to "Resource groups". There are different way to do that:
   - Click the hamburger icon in the upper left corner, select "Resource groups" from the menu.
   - In the search bar, type "Resource groups" and select it from the "Services" section.
   - Select the "Resoruce groups" button from the landing page.
 
-  :bulb: A [resource group](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) is a container that will hold all resources that constitute your application -- such as the database, the virtual networking components and the Azure Function to host your application code.
+> [!TIP]
+> <details><summary>If you don't know what a [resource group](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) is...</summary>
+>  
+> ...you might want to know that it is a kind of container that will hold all resources that constitute your application -- such as the database, the virtual networking components and the Azure Function to host your application code.
+> 
+> </details>
 
 - Locate the resource group having the name of your username.
 
@@ -30,9 +34,12 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Login from your development terminal
 
-:point_up: Two different CLIs
+> [!TIP]
+> You will be using two different CLI tools in this quest: 
+> - The [Azure Command-Line Interface (CLI) (`az`)](https://learn.microsoft.com/en-us/cli/azure/) is a set of commands used to create and manage Azure resources.
+> - The [Azure Developer CLI (`azd`)](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/overview) is a tool that helps you getting your application from local development environment to Azure.
 
-- Go back to your VS Code in your codespace. To login in to both, the Azure CLI (`az`) and the Azure Developer CLI (`azd`).
+- Go back to your VS Code in your codespace.
 
 - Log in using Azure CLI; follow the instructions to go confirm your identity in the browser.
 
@@ -40,7 +47,12 @@ In this quest, you will bring your application to the Azure cloud to make it ava
   az login --use-device-code
   ```
 
-  ![](2024-01-17-10-23-27.png)
+  Example output:
+
+  ```
+  $ az login --use-device-code
+  To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CWVM7T7L5 to authenticate.
+  ```
 
   ![](2024-01-17-10-24-53.png)
 
@@ -72,11 +84,11 @@ In this quest, you will bring your application to the Azure cloud to make it ava
   azd env new mhp-1
   ```
 
-- Specify the properties:
+- Specify following environment properties; get all values from the link provided by your coaches:
   ```
-  azd env new [YOUR USER NAME HERE, e.g. mhp-1] 
-  azd env set AZURE_RESOURCE_GROUP [YOUR USER NAME HERE, e.g. mhp-1]
-  azd env set AZURE_SUBSCRIPTION_ID "..."
+  azd env new [YOUR PARTICIPANT ID HERE, e.g. mhp-1] 
+  azd env set AZURE_RESOURCE_GROUP [YOUR PARTICIPANT ID HERE, e.g. mhp-1]
+  azd env set AZURE_SUBSCRIPTION_ID [YOUR AZURE SUBSCRIPTION ID HERE]
   azd env set AZURE_LOCATION "westeurope"
 
   azd env set ODATA_URL "..."
@@ -89,27 +101,55 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
   :construction: We'd need to confirm resource quotas.
 
-  :bulb: If you want, confirm these values are written correctly by listing them:
-  ```
-  azd env get-values
-  ```
+> [!TIP]
+> <details><summary>If you want, confirm these values...</summary>
+> ...have been written successfully by running
+>
+> ```
+> azd env get-values
+> ```
+> Example output:
+> ```
+> $ azd env get-values
+> AZURE_ENV_NAME="mhp-2"
+> AZURE_LOCATION="westeurope"
+> AZURE_RESOURCE_GROUP="mhp-2"
+> ...
+> ```
+> 
+> </details>
 
 ## Deploy the application
 
 
-- Deployment option 1: Do the "one shot deployment"
+- Deployment option 1: Do the "one shot deployment" with `azd up`
 
- - Deploy your application by running command 
+> [!TIP]
+> Behind the scenes, `azd up` will perform three steps for you:
+> - `azd package`, to build and package your application code.
+> - `azd provision`, to deploy the Azure resources as defined in the IaC artifacts.
+> - `azd deploy`, to deploy the packaged application to Azure.
+> The "three step deployment" in the other deployment option will run these three steps separately. 
+
+
+  - Deploy your application by running command 
 
     ```
     azd up
     ```
-    :bulb: Behind the scenes, `azd up` will perform three steps for you:
-    - `azd package`, to build and package your application code.
-    - `azd provision`, to deploy the Azure resources as defined in the IaC artifacts.
-    - `azd deploy`, to deploy the packaged application to Azure.
-    
-    :point_up: The "three step deployment" in the other deployment option will run these three steps separately. 
+
+    Example output:
+    ```
+    [...]
+
+    Deploying services (azd deploy)
+
+    (✓) Done: Deploying service sap-cap-api
+    - Endpoint: https://app-api-mtdcoapdqo6wm.azurewebsites.net/
+
+    SUCCESS: Your application was provisioned and deployed to Azure in 1 minute 39 seconds.
+    ```
+
 
 - Deployment option 2: Do the "three step deployment"
 
@@ -213,8 +253,10 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Further exploration
 
+> [!IMPROTANT]
+> The following sections are optional. Please select where you want to go deeper depending on your progress, remaining time and your personal interest and feel free to continue with quest 5 if you prefer.
 
-### Inspect pre-defined dashboards
+### (optional) Inspect pre-defined dashboards
 
 As part of the infrastructure provisioning step, any `azd` project will come with monitoring tooling built-in. The tooling is built on different services from the [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview) family:
 
@@ -243,7 +285,7 @@ The setup comes with three basic dashboards that you can access via the portal o
 
 This gives you a solid starting point for monitoring your application as well as troubleshooting it.
 
-### Connect to cloud-hosted PostgreSQL database
+### (optional) Connect to cloud-hosted PostgreSQL database
 
 To store application data, an instance of [Azure Cosmos DB for PostgreSQL documentation](https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/) was deployed in the Azure cloud. As this application exposes the APIs of a common PostgreSQL database, you can use any existing application or administration tool that supports PostgreSQL databases to connect to the database. 
 
@@ -271,16 +313,17 @@ To store application data, an instance of [Azure Cosmos DB for PostgreSQL docume
 
   ![](2024-01-17-19-08-31.png)
 
-  :point_up: If the table is empty, you might not yet have triggerd data population from the OData service by launching the BusinessPartnersLocal Fiori application from your application landing page.
+> [!IMPORTANT]
+> If the table is empty, you might not yet have triggerd data population from the OData service by launching the BusinessPartnersLocal Fiori application from your application landing page.
 
 
-### Security
+### (optional) Explore application security 
 
 To ensure security an application you deploy to Azure, one crucial point is to protect access credentials for backend components. Azure therefore offers two major capabilities:
 - Use [Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview) as central storage for all Keys, Secrets and Certificates for applications hosted on the Azure cloud.
 - Completely avoid access credentials by using [managed identities](https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) and rely on the Azure platform to handle authentication of backend services for you.
 
-#### Exploring the Key Vault
+#### Explore the Key Vault
 
 - Open your Key Vault resource. 
 
@@ -296,13 +339,13 @@ To ensure security an application you deploy to Azure, one crucial point is to p
 
   ![](2024-01-23-08-08-57.png)
 
-#### Exploring the App Service Managed Identity
+#### Explore the App Service's Managed Identity
 
 - Open your App Service resource and browse to the "Identity" blade in the "Settings" seciton. Verify the state is "On".
 
   ![](2024-01-23-07-32-23.png)
 
-  :bulb: With that, the application (including your custom-code) can rely on platform capabilities to access other Azure resources. 
+  This will allow your application (including your custom-code) to rely on platform capabilities to access other Azure resources. 
 
 - Open the "Configuration" blade; the "Application Settings" lists all parameters that will be supplied to your application as environment variables. To explore the values, click the "Show values" button.
 
@@ -310,18 +353,19 @@ To ensure security an application you deploy to Azure, one crucial point is to p
 
 - Explore the settings that contain secret values (e.g., `ODATA_USERPWD`); instead of specifying the value explicity, it refers to your Azure Key Vault. 
 
-  :point_up: Note that this refernece does not contain a password to authenticate access from the App Service -- it only holds a resource to the specific secret.
-
   ```
   @Microsoft.KeyVault(SecretUri=https://kv-kt6nr4qdrsqss.vault.azure.net/secrets/kv-secret-odata-password)
   ```
+
+> [!TIP]
+> Note that this refernece does not contain a password to authenticate access from the App Service -- it only holds a resource to the specific secret.
 
 - Go to the Key Vault and open the "Access policies" blade. You see that the Key Vault uses the App Service's managed identity to authorize access.
 
   ![](2024-01-23-07-42-18.png)
 
 
-### Inspect the application log
+### (optional) Inspect the application log
 As managed service, the "App Service" resource hosting your application comes with a lot of platform-managed capabilities. For example, you can easily inspect the log information written from your console. 
 
 - Typically, there are different paths to achieve the same goal. One way to view the application log is to open the Azure Portal, browse to App Service resource and open up the "Logstream" blade in the "Monitoring" section:
@@ -334,10 +378,7 @@ As managed service, the "App Service" resource hosting your application comes wi
   az webapp log tail --resource-group [YOUR RESOURCE GROUP NAME HERE] --name [YOUR APP SERVICE NAME HERE]
   ```
 
-  :construction: Is there really no way to get a specific value out of the env? That would allow us to replace the [..] replaceholders with variables.
-
-
-## Further remarks
+## (optional) Further remarks
 
 ### Network segmentation and security
 

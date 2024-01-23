@@ -20,37 +20,37 @@ Our journey will start from ...
 🌟
 🕒 30 mins
 
-## [Quest 1](student/quest1.md) - Understand what we want to build.
+## [Quest 1](student/quest1.md) - Understand what we want to build
 
-🌟🌟🌟🌟
-🕒 1 h
+🌟
+🕒 15 min
 
-## [Quest 2](student/quest2.md) - Prepare your Development Environment
+## [Quest 2](student/quest2.md) - Prepare your development environment
+
+🌟🌟🌟
+🕒 15 mins
+
+⏳Take a natural break here if suitable.
+
+## [Quest 3](student/quest3.md) - The inner dev loop: Run your app in your dev environment
+
+🌟🌟🌟
+🕒 30 min
+
+## [Quest 4](student/quest4.md) - Deploy your application to Azure
 
 🌟🌟🌟
 🕒 45 mins
 
-⏳Take a natural break here if suitable.
-
-## [Quest 3](student/quest3.md) - The inner dev loop: Running the code in your dev environment.
-
-🌟🌟🌟🌟
-🕒 1,5 h
-
-## [Quest 4](student/quest4.md) - 
-
-🌟
-🕒 30 mins
-
-## [Quest 5](student/quest5.md) - 
+## [Quest 5](student/quest5.md) - Protect your app with user authentication
 
 🌟🌟
-🕒 1 h
+🕒 30 h
 
-## [Quest 6](student/quest6.md) - 
+## [Quest 6](student/quest6.md) - Clean up your demo environment
 
 🌟
-🕒 30 mins
+🕒 15 mins
 
 Approach the last quest with a bang
 

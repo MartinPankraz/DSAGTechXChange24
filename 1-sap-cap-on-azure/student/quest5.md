@@ -32,37 +32,37 @@ So far, your application is open to anyone on the internet and does not require 
   
   SUCCESS: Your application was provisioned in Azure in 4 minutes 13 seconds.
   You can view the resources created under the resource group mhp-1 in Azure Portal:
-  https://portal.azure.com/#@/resource/subscriptions/c5496acd-5db4-4e90-987d-78c212f20915/resourceGroups/mhp-1/overview
+  https://portal.azure.com/#@/resource/subscriptions/.../resourceGroups/mhp-1/overview
   ```
 
-  :bulb: While the infrastructure is provisioned, you might want to take a glimpse at the code to follow the data flow of this parameter:
-
-    - We have added the parameter `APP_USE_ENTRAID_AUTHENTICATION` to the AZD environment with value `true`.
-
-    - During infrastructure provisioning, `azd provision` will refer to file `infra/app.parameters.json`  and perform an [input parameter substitution](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/manage-environment-variables). This means, that `${APP_USE_ENTRAID_AUTHENTICATION}` will be repalced with `true`:
-  ```json
-  {
-    "parameters": {
-      ...
-      "useEntraIDAuthentication": {
-        "value": "${APP_USE_ENTRAID_AUTHENTICATION}"
-      }
-    }
-  }
-  ```
-
-  - The values specified in `infra/app.parameters.json` will be applied to `infra/app.bicep` to determine the target values for all resource configurations; see the parameter definition in the top section of the file:
-  ```bicep
-  @description('Flag to use Entra ID authentication feature of Azure App Service')
-  param useEntraIDAuthentication bool = false
-  ```
-
-  - Also, it will be used in the PowerShell script `handleAzureAuthAndDBConnectionString.ps1` in the `hooks` folder to control some configuration parameters after infrastructure provisioning. 
-
-  ```
-  if ($env:USE_EntraIDAuthentication -eq "false") {
-    ...
-  ```
+> [!TIP]
+> <details><summary>While the infrastructure is provisioned...</summary>
+>  
+> ...you might want to take a glimpse at the code to follow the data flow of this parameter:
+> - We have added the parameter `APP_USE_ENTRAID_AUTHENTICATION` to the AZD environment with value `true`.
+> - During infrastructure provisioning, `azd provision` will refer to file `infra/app.parameters.json`  and perform an [input parameter > substitution](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/manage-environment-variables). This means, that `$> {APP_USE_ENTRAID_AUTHENTICATION}` will be repalced with `true`:
+>   ```json
+>   {
+>     "parameters": {
+>       ...
+>       "useEntraIDAuthentication": {
+>         "value": "${APP_USE_ENTRAID_AUTHENTICATION}"
+>       }
+>     }
+>   }
+>   ```
+> - The values specified in `infra/app.parameters.json` will be applied to `infra/app.bicep` to determine the target values for all resource > configurations; see the parameter definition in the top section of the file:
+>   ```bicep
+>   @description('Flag to use Entra ID authentication feature of Azure App Service')
+>   param useEntraIDAuthentication bool = false
+>   ```
+> - Also, it will be used in the PowerShell script `handleAzureAuthAndDBConnectionString.ps1` in the `hooks` folder to control some configuration > parameters after infrastructure provisioning. 
+>   ```
+>   if ($env:USE_EntraIDAuthentication -eq "false") {
+>     ...
+>   ```
+> 
+> </details>
 
 - Once the `azd provision` has terminated, trigger a re-deployment of your application.
 
@@ -70,10 +70,20 @@ So far, your application is open to anyone on the internet and does not require 
   azd deploy
   ```
 
-  Example output:
-
+  Example output: 
   ```
-  ...
+  $ azd deploy
+
+  Deploying services (azd deploy)
+  
+    (✓) Done: Deploying service sap-cap-api
+    - Endpoint: https://app-api-kt6nr4qdrsqss.azurewebsites.net/
+  
+  
+  SUCCESS: Your application was deployed to Azure in 7 minutes 43 seconds.
+  You can view the resources created under the resource group mhp-1 in Azure Portal:
+  https://portal.azure.com/#@/resource/subscriptions/...
+
   ```
 
 ## Inspect and test the authentication of your application
@@ -82,11 +92,7 @@ So far, your application is open to anyone on the internet and does not require 
 
   ![](2024-01-23-08-45-34.png)
 
-- Once `azd deploy` has terminated, go back to the Overview blade and open your application again by clicking the "Default domain" link. 
-
-  :point_up: It might take some time (up to some minutes) until the application is completely redeployed. 
-
-  Once redeployment has succeeded, a page refesh will direct you to the well-known Entra ID authentication. After selecting your account and granting the permission to access your (test account's) profile data, you will be redirected to the landing page of your application:
+- Once `azd deploy` has terminated, go back to the Overview blade and open your application again by clicking the "Default domain" link. Your application will now redirect you to the well-known Entra ID login page. After selecting your account and granting the permission to access your (test account's) profile data, the landing page of your application will open up:
 
   ![](2024-01-23-09-01-16.png)
 

@@ -118,7 +118,7 @@ You have two options:
 
 - See how VS Code refreshes and loads your repo content in your local VS Code window.
 
-- :bulb: Open a new Terminal and run `az version` and `azd version`.
+- Open a new Terminal and run `az version` and `azd version`.
 
   ![](2024-01-10-15-37-03.png)
 

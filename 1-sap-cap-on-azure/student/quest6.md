@@ -1,4 +1,4 @@
-# Quest 6 - Clean up the dem environment
+# Quest 6 - Clean up your demo environment
 
 This is the final quest of this tutorial. We hope you enjoyed the experience and got some valuable insights from this walkthrough. Before claiming your badge, please take some final minutes to clean up all resources 
 
@@ -19,11 +19,11 @@ This is the final quest of this tutorial. We hope you enjoyed the experience and
   
   
     WARNING: Feature 'resourceGroupDeployments' is in alpha stage.
-    To learn more about alpha features and their support, visit   https://aka.ms/azd-feature-stages.
+    To learn more about alpha features and their support, visit https://aka.ms/azd-feature-stages.
   
     Resource group(s) to be deleted:
   
-      • mhp-2: https://portal.azure.com/#@/resource/subscriptions/  c5496acd-5db4-4e90-987d-78c212f20915/resourceGroups/mhp-2/  overview
+      • mhp-2: https://portal.azure.com/#@/resource/subscriptions/.../resourceGroups/mhp-2/overview
   
   ? Total resources to delete: 9, are you sure you want to   continue? (y/N) Yes
 

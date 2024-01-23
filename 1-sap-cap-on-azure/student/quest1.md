@@ -1,11 +1,15 @@
 # Quest 1 - Understand what we want to build
+
 :construction: Add Architecture overview and description here.
 
 
-#### Legend:
-- :construction: A TODO for content maintainers.
-- :bulb: Highlights additional information / insights.
-- :point_up: An important aspect to note. (Might be a restriction.)
+### Legend:
+
+> [!TIP]
+> A tip will provide with some further information and insights.
+
+> [!IMPORTANT]
+> An 'Important' box will will provide some instructions for this tutorial.
 
 ## Where to next?
 
