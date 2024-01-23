@@ -5,6 +5,9 @@
 
 * Go to [Microsoft Designer](https://designer.microsoft.com/image-creator) to open the Microsoft Designer
 
+https://www.bing.com/images/create
+
+
 * Sign in With your Microsoft ID (e.g. outlook.com, hotmail.com, live.com)
 
 * Enter a prompt like 
