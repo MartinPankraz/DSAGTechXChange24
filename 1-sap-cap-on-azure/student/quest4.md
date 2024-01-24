@@ -121,118 +121,82 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Deploy the application
 
-
-- Deployment option 1: Do the "one shot deployment" with `azd up`
-
-> [!TIP]
-> Behind the scenes, `azd up` will perform three steps for you:
-> - `azd package`, to build and package your application code.
-> - `azd provision`, to deploy the Azure resources as defined in the IaC artifacts.
-> - `azd deploy`, to deploy the packaged application to Azure.
-> The "three step deployment" in the other deployment option will run these three steps separately. 
-
-
-  - Deploy your application by running command 
-
-    ```
-    azd up
-    ```
-
-    Example output:
-    ```
-    [...]
-
-    Deploying services (azd deploy)
-
-    (✓) Done: Deploying service sap-cap-api
-    - Endpoint: https://app-api-mtdcoapdqo6wm.azurewebsites.net/
-
-    SUCCESS: Your application was provisioned and deployed to Azure in 1 minute 39 seconds.
-    ```
-
-
-- Deployment option 2: Do the "three step deployment"
-
-  - Build and package your application code. 
-    ```
-    azd package
-    ```
-
-    Example output:
-    ```
-    $ azd package
-
-    Packaging services (azd package)
-
-      (✓) Done: Packaging service sap-cap-api
-      - Package Output: /tmp/  app-service-javascript-sap-cap-quickstart-sap-cap-api-azddeploy-1705300477.zip
-
-    SUCCESS: Your application was packaged for Azure in 3 seconds.
-    ```
-
-  - Deploy the Azure resources defined as [Infrastructure as Code (IaC)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code) in the `.bicep` files in the `infra` directory.
-
-    ```
-    azd provision
-    ```
-
-    Example output:
-    ```
-    $ azd provision
-
-    Provisioning Azure resources (azd provision)
-    Provisioning Azure resources can take some time.
-    
-    
-    Subscription: [SELECT YOUR TARGET SUBSCRIPTION HERE]
-    Location: [SELECT YOUR TARGET REGION HERE]
-    
-      You can view detailed progress in the Azure Portal:
-      https://portal.azure.com/#view/HubsExtension/DeploymentDetailsBlade...
-    
-      (✓) Done: App Service plan: plan-kt6nr4qdrsqss
-      (✓) Done: Log Analytics workspace: log-kt6nr4qdrsqss
-      (✓) Done: Key Vault: kv-kt6nr4qdrsqss
-      (✓) Done: Application Insights: appi-kt6nr4qdrsqss
-      (✓) Done: Portal dashboard: dash-kt6nr4qdrsqss
-      (✓) Done: App Service: app-api-kt6nr4qdrsqss
-    Retrieving CosmosDB for PSQL (citus) FQDN...
-    Storing CosmosDB for PSQL (citus) FQDN as POSTGRES_HOSTNAME in azure app settings...
-    App settings have been redacted. Use `az webapp/logicapp/functionapp config appsettings list` to view.
-
-    [...]
-    
-    SUCCESS: Your application was provisioned in Azure in 3 minutes 44 seconds.
-    You can view the resources created under the resource group mhp-1 in Azure Portal:
-    https://portal.azure.com/#@/resource/subscriptions/...
-
-    ```
-
-  - Deploy the application packaged in the first step to the resources deployed in Azure.
-
-    ```
-    azd deploy
-    ```
-
-    Example output:
-    ```
-    $ azd deploy
-
-    Deploying services (azd deploy)
-    
-      (✓) Done: Deploying service sap-cap-api
-      - Endpoint: https://app-api-kt6nr4qdrsqss.azurewebsites.net/
-    
-    
-    SUCCESS: Your application was deployed to Azure in 7 minutes 43 seconds.
-    You can view the resources created under the resource group mhp-1 in Azure Portal:
-    https://portal.azure.com/#@/resource/subscriptions/...
-
-    ```
+- Provision the Azure resources defined as [Infrastructure as Code (IaC)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/readyconsiderations/infrastructure-as-code) in the `.bicep` files in the `infra` directory.
+  ```
+  azd provision
+  ```
+  Example output:
+  ```
+  $ azd provision
+  Provisioning Azure resources (azd provision)
+  Provisioning Azure resources can take some time.
   
+  
+  Subscription: [SELECT YOUR TARGET SUBSCRIPTION HERE]
+  Location: [SELECT YOUR TARGET REGION HERE]
+  
+    You can view detailed progress in the Azure Portal:
+    https://portal.azure.com/#view/HubsExtension/DeploymentDetailsBlade...
+  
+    (✓) Done: App Service plan: plan-kt6nr4qdrsqss
+    (✓) Done: Log Analytics workspace: log-kt6nr4qdrsqss
+    (✓) Done: Key Vault: kv-kt6nr4qdrsqss
+    (✓) Done: Application Insights: appi-kt6nr4qdrsqss
+    (✓) Done: Portal dashboard: dash-kt6nr4qdrsqss
+    (✓) Done: App Service: app-api-kt6nr4qdrsqss
+  Retrieving CosmosDB for PSQL (citus) FQDN...
+  Storing CosmosDB for PSQL (citus) FQDN as POSTGRES_HOSTNAME in azure app settings...
+  App settings have been redacted. Use `az webapp/logicapp/functionapp config appsettings list` to view.
+  [...]
+  
+  SUCCESS: Your application was provisioned in Azure in 3 minutes 44 seconds.
+  You can view the resources created under the resource group mhp-1 in Azure Portal:
+  https://portal.azure.com/#@/resource/subscriptions/...
+  ```
+- Deploy the application packaged in the first step to the resources deployed in Azure.
+  ```
+  azd deploy
+  ```
+  Example output:
+  ```
+  $ azd deploy
+  Deploying services (azd deploy)
+  
+    (✓) Done: Deploying service sap-cap-api
+    - Endpoint: https://app-api-kt6nr4qdrsqss.azurewebsites.net/
+  
+  
+  SUCCESS: Your application was deployed to Azure in 7 minutes 43 seconds.
+  You can view the resources created under the resource group mhp-1 in Azure Portal:
+  https://portal.azure.com/#@/resource/subscriptions/...
+  ```
+  
+> [!TIP]
+> <details><summary>If you want to speed up your deployment even more...</summary>
+>  
+> ...you might want to know that the `azd up` command combines the steps `azd provision` and `azd deploy` in one and allows for a "one shot" deployment:
+> ```
+> azd up
+> ```
+> 
+> Example output:
+> ```
+> [...]
+> 
+> Deploying services (azd deploy)
+> 
+> (✓) Done: Deploying service sap-cap-api
+> - Endpoint: https://app-api-mtdcoapdqo6wm.azurewebsites.net/
+> 
+> SUCCESS: Your application was provisioned and deployed to Azure in 1 minute 39 seconds.
+> ```
+> 
+> </details>
+
+
 ## Inspect the deployment in Azure
 
-- Go back to the Azure portal and browse to your resource group.
+- Go back to the [Azure portal (https://portal.azure.com)](https://portal.azure.com) and browse to your resource group.
 
 - Confirm a set of resources have been deployed to host your application.
 
@@ -246,10 +210,36 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
   ![](2024-01-15-08-14-17.png)
 
-- Click 'BusinessPartnersLocal' to retrieve some data from the OData service.
+- Click the link to `index.html` below "Web Applications" to retrieve some data from the OData service.
 
   ![](2024-01-17-19-07-04.png)
 
+## Inspect the application log
+
+As managed service, the "App Service" resource hosting your application comes with a lot of platform-managed capabilities. For example, you can easily inspect the log information written from your console. 
+
+- Typically, there are different paths to achieve the same goal. One way to view the application log is to open the Azure Portal, browse to App Service resource and open up the "Logstream" blade in the "Monitoring" section:
+
+  ![](2024-01-17-18-21-02.png)
+
+- For automation or if you feel more comfortable using the command-line interface (CLI), you can equally invoke the command 
+
+  ```
+  az webapp log tail --resource-group [YOUR RESOURCE GROUP NAME HERE] --name [YOUR APP SERVICE NAME HERE]
+  ```
+
+
+## Claim your badge now! 🎖️
+
+Congratulations! You have successfully completed this tutorial and can show your friends that you have now successfully deployed you SAP CAP application to Azure App Services. To claim your badge, you need a URL and an access code from your coaches. Therefore, please send short mail to the address shared in your session and share the link to your application with them.
+
+```
+To:       [Coaches' mail address.]
+Subject:  I'm done!
+
+Body:
+[Paste your application URL here.]
+```
 
 ## Further exploration
 
@@ -291,7 +281,7 @@ To store application data, an instance of [Azure Cosmos DB for PostgreSQL docume
 
 - Open the Adminer interface again as you did in [quest 3](quest3.md).
 
-- In the Azure Portal, browse to the resource of type "Azure Cosmos DB for PostgreSQL Cluster" in your resource group; this resource represents your database cluster. Copy the FQDN specified as "Coordinator name" to your clipboard and paste in the "host" field of your Adminer login page.
+- In the [Azure Portal (https://portal.azure.com)](https://portal.azure.com), browse to the resource of type "Azure Cosmos DB for PostgreSQL Cluster" in your resource group; this resource represents your database cluster. Copy the FQDN specified as "Coordinator name" to your clipboard and paste in the "host" field of your Adminer login page.
 
   ![](2024-01-17-19-01-15.png)
 
@@ -314,7 +304,7 @@ To store application data, an instance of [Azure Cosmos DB for PostgreSQL docume
   ![](2024-01-17-19-08-31.png)
 
 > [!TIP]
-> If the table is empty, you might not yet have triggerd data population from the OData service by launching the BusinessPartnersLocal Fiori application from your application landing page.
+> If the table is empty, you might not yet have triggerd data population from the OData service by launching your application from the startup landing page.
 
 
 ### (optional) Explore application security 
@@ -363,34 +353,6 @@ To ensure security an application you deploy to Azure, one crucial point is to p
 - Go to the Key Vault and open the "Access policies" blade. You see that the Key Vault uses the App Service's managed identity to authorize access.
 
   ![](2024-01-23-07-42-18.png)
-
-
-### (optional) Inspect the application log
-As managed service, the "App Service" resource hosting your application comes with a lot of platform-managed capabilities. For example, you can easily inspect the log information written from your console. 
-
-- Typically, there are different paths to achieve the same goal. One way to view the application log is to open the Azure Portal, browse to App Service resource and open up the "Logstream" blade in the "Monitoring" section:
-
-  ![](2024-01-17-18-21-02.png)
-
-- For automation or if you feel more comfortable using the command-line interface (CLI), you can equally invoke the command 
-
-  ```
-  az webapp log tail --resource-group [YOUR RESOURCE GROUP NAME HERE] --name [YOUR APP SERVICE NAME HERE]
-  ```
-
-## (optional) Further remarks
-
-### Network segmentation and security
-
-In the last steps, you have seen that you can easily connect to your web application, the database and the key vault via public internet. We have selected this unbound access to simplify the setup for this demo. Effectively, you have a wide range of opportunities to protect your resources from unauthorized access by introducing network restrictions:
-
-- Service firewalls can be enabled for many services, including [Azure Cosmos DB for PostgreSQL](https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/howto-manage-firewall-using-portal) and [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/network-security).
-
-- With the help of [Private Endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview), Azure services can be assigned IP addresses from your internal virtual networks, thereby restricting any inbound access from public internet.
-
-- Finally, we have general guidelines on how to securely set up your network in the cloud in our [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/), [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/) and [Well-Architected Framework](https://learn.microsoft.com/en-gb/azure/well-architected/). For example [Secure and govern workloads with network-level segmentation](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation).
-
-
 
 
 ## Where to next?

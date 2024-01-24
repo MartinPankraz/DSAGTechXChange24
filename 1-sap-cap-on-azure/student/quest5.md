@@ -1,4 +1,4 @@
-# Quest 5 - Protect your app with user authentication
+# Quest 5 - Protect your app
 
 So far, your application is open to anyone on the internet and does not require any user authentication. In this quest, you will make authentication required for any user interaction. Instead of implementing your own dedicated user management and authentication code, you will enable [OAuth 2.0 authorization with Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/architecture/auth-oauth2) for your application to allow users to log in with their corporate Entra identity.
 
@@ -99,7 +99,23 @@ So far, your application is open to anyone on the internet and does not require 
   ![](2024-01-23-09-06-26.png)
 
 
-  
+## Towards SAP Principal propagation
+
+In the interest of time and simplicity, we have been using a single account to connect to the backing SAP system via OData. In an enterprise-grade scenario, you will want to use the individual user's identity to access the OData service to query or change data. This requires your application to map the user's Entra identity to his / her identity in the SAP system. You can achieve this with the help of SAP Principal Propagation and Azure API Management (APIM) as described [here](https://learn.microsoft.com/azure/api-management/sap-api#production-considerations). 
+
+> [!TIP]
+> The sample code in the repostiory allows you include API management in your deployment and enable principal propagation; if you want to learn more, reach out to your coaches.
+
+## A note on network segmentation and security
+
+As you have seen, your App Service instance and your Key Vault (as well as your database) can be accessed from public internet. We have selected this unbound access to simplify the setup for this tutorial. Effectively, you have a wide range of opportunities to protect your resources from unauthorized access by introducing network restrictions:
+
+- Service firewalls can be enabled for many services, including [Azure Cosmos DB for PostgreSQL](https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/howto-manage-firewall-using-portal) and [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/network-security).
+
+- With the help of [Private Endpoints](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview), Azure services can be assigned IP addresses from your internal virtual networks, thereby restricting any inbound access from public internet.
+
+- Finally, we have general guidelines on how to securely set up your network in the cloud in our [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/), [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/) and [Well-Architected Framework](https://learn.microsoft.com/en-gb/azure/well-architected/). For example [Secure and govern workloads with network-level segmentation](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation).
+
 
 ## Where to next?
 

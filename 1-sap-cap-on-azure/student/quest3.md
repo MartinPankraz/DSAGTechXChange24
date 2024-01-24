@@ -4,9 +4,6 @@ Even when teams build a cloud-native application, the individual developers need
 
 In this quest, you will set up and test your own development environment for your own inner dev loop. You will start by setting a couple of environment parameters to connect to the (external) OData service, use [docker](https://www.docker.com/) to spin up a temporary database and then deploy the [CAP application](https://cap.cloud.sap/docs/about/).
 
-:construction: Update Versions? (npm)
-  ![](2024-01-11-09-03-44.png)
-
 ## Prepare your environment configuration
   
 - In the terminal, make the `src` directory your working directory.
@@ -14,9 +11,9 @@ In this quest, you will set up and test your own development environment for you
   cd ./src
   ```
 
-- Based on the sample file in the `templates` directory, create your own `.env` file. It will contain the individual parameters for your developoment configuration. 
+- Based on the sample file `simple.env` in the `templates` directory, create your own `.env` file. It will contain the individual parameters for your developoment configuration. 
   ```
-  cp ../templates/.env ./.env
+  cp ../templates/simple.env ./.env
   ```
   
 - Open your `.env` file in VS Code, and update the following parameters. Get the new values from the link provided by your coaches. 
@@ -26,8 +23,6 @@ In this quest, you will set up and test your own development environment for you
   - `ODATA_USERPWD`, set to value `odata-userpwd` in section `sap-cap-on-azure`.
 
   (Please leave all remaining properties unchanged.)
-
-  :construction: Do we want to clean up the `.env` file (are there any obsolete properties, re-order? `ODATA_` prefix for SAP_CLIENT?)?
 
 ## Deploy your CAP application 
 
@@ -97,7 +92,7 @@ In this quest, you will set up and test your own development environment for you
 
   ![](2024-01-23-18-49-52.png)
 
-  To test integration with the ODATA provider, click `BuisinessPartnersLocal` or `Fiori preview` and follow your terminal in VS Code. 
+  To test integration with the ODATA provider, click the link to `index.html` below "Web Applications" and follow your terminal in VS Code. 
   
   ![](2024-01-23-18-51-18.png)
   

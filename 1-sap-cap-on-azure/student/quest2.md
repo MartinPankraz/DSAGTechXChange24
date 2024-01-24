@@ -6,13 +6,13 @@ In this quest, you will prepare your development environment for this tutorial. 
 
 - Log in to Github
 
-- Browse to [MartinPankraz/DSAGTechXChange24: Content supporting the DSAG TechXChange Feb 2024](https://github.com/MartinPankraz/DSAGTechXChange24) 
+- In a new browser tab, browse to [Azure-Samples/app-service-javascript-sap-cloud-sdk-quickstart: Sample project showcasing SAP Cloud SDK for OData consumption from SAP S4 with Azure App Service](https://github.com/Azure-Samples/app-service-javascript-sap-cloud-sdk-quickstart).
 
 - Fork the repository into your own GitHub account.
   
   ![](2024-01-10-14-43-51.png)
 
-  ![](2024-01-10-14-49-41.png)
+  ![](2024-01-24-16-57-28.png)
 
 ## Prepare your development environment
 
