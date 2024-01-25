@@ -6,20 +6,20 @@
 
 ## Introduction
 
-Before you start using the Microsoft AI SDK for SAP, you will play with and fine-tune your prompt with the free [Microsoft Copilot from Bing](https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx).
+Before you start using the Microsoft AI SDK for SAP, you will play with and fine-tune your prompt with the free [Microsoft Copilot on Bing](https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx).
 
-Alternatively, you may use [Azure AI Studio](https://ai.azure.com/)  or [ChatGPT](https://chat.openai.com/) if you have access to those apps.
+Alternatively, you may use [Azure AI Studio](https://ai.azure.com/) or [ChatGPT](https://chat.openai.com/) if you have access to those apps. We would recommend AI Studio for its tailored playground capabilities, but in order to reduce the entry barrier, we focus on Bing.
 
 ## The path
 
-> [!IMPORTANT]
+> [!WARNING]
 > If you don't want sign-in with Bing, you are limited to 4 prompts per day. If you want to use more prompts, you need to sign-in with your Microsoft account.
 
 1. Get started with the following prompts:
 
 `You are a virtual assistant suggesting creative product descriptions. Use less than 200 characters.`
 
-`Create a description for the product with Name: Surface Laptop 3, Category: Laptop`
+`Create a description for the product with Name: Surface Laptop 3, and Category: Laptop`
 
 `Create the text in the tone of Homer Simpson`
 

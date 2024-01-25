@@ -26,28 +26,30 @@ This lab was conducted with S/4HANA 2022.
 
 ## [Quest 1](student/quest1.md) - Setting up
 
-You will setup your environment ready, start Eclipse with ABAP Development tools and login to your ABAP Cloud environment.
+You will setup your environment and start Eclipse with ABAP Development tools (ADT). Ideally this was pre-prepared prior the hands-on lab.
+
+Ensure you are ready to go by logging in to your ABAP Cloud environment.
 
 🌟🌟
 🕒 30 mins
 
 ## [Quest 2](student/quest2.md) - Generate RAP service and Fiori UI
 
-You will generate an SAP RESTful ABAP Programming model service based of a table design and a Fiori UI for it to maintain values.
+You will generate an SAP RESTful ABAP Programming model service based of a provided table definition. Moreover you will generate a Fiori UI to maintain values.
 
 🌟🌟
 🕒 15 mins
 
 ## [Quest 3](student/quest3.md) - Develop your AI prompt
 
-Before you start using the Microsoft AI SDK for SAP, you will play and fine-tune your prompt on the Azure AI Studio.
+Before you start using the Microsoft AI SDK for SAP, you will play with and fine-tune your prompt on the GPT enabled AI service of your choice.
 
 🌟🌟🌟🌟
 🕒 45 mins
 
 ## [Quest 4](student/quest4.md) - Add Microsoft AI SDK for SAP to your project
 
-Once you are happy with your prompt, you will add the Microsoft AI SDK for SAP to your project and use it to generate the product description during the create process.
+Once you are happy with your prompt, you will add the Microsoft AI SDK for SAP to your project and use it to generate fancy product descriptions during the create process.
 
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
