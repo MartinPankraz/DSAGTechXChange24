@@ -5,7 +5,7 @@
 Upload your own data
 In addition to leveraging Public websites, Copilot Studio can also access documents in private SharePoint libraries, or documents that have been uploaded before. 
 
-* Navigate to Generate AI and click "click to browse"
+* Navigate to `Generate AI` and click `click to browse`
 ![Sign In](../media/quest3/01-GenerativeAI.png)
 
 Examples can be found here:
@@ -22,7 +22,7 @@ Examples can be found here:
 > [!NOTE]
 > Even if the document has been uploaded in English, you can still ask it with different languages
 ![Sign In](../media/quest3/04-ChatWithYourData.png)
-e.g. "Wie war das Quartalsergebnis von SAP?" oder
+e.g. `Wie war das Quartalsergebnis von SAP?` oder
 "vergleiche das Quartalsergebnis von SAP mit Microsoft" und 
 "wie war der Cloud Umsatz von SAP?"
 ![Sign In](../media/quest3/05-MoreChats.png)

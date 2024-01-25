@@ -11,40 +11,40 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 > Note: You can take a look at the Power Automate Flow here xxx. Feel free to rebuild it at a later time following these xxx instructions in your own environment. 
 
 
-* Go to TOpics & Plugins -> Systems and Disable the "Conversational boosting"
+* Go to `Topics & Plugins` -> `Systems` and disable the `Conversational boosting`
 ![Disable Boosting](../media/quest4/01-DisabledBoosting.png)
 
-* Select the Fallback topic and under the first Trigger, click on "+" and from Advanced -> Select "Send HTTP request"
+* Select the `Fallback` topic and under the first Trigger, click on `+` and from `Advanced` -> select `Send HTTP request`
 ![Disable Boosting](../media/quest4/02-AddHTTPAction.png)
 
-* Change the Method to "Post"
+* Change the Method to `Post`
 ![Disable Boosting](../media/quest4/03-SelectMethod.png)
 
-* Under "Headers and body" Click on Edit and on the right hand side, select "Raw content" from the drop-box
+* Under `Headers and body` Click on `Edit` and on the right hand side, select `Raw content` from the drop-box
 ![Disable Boosting](../media/quest4/04-SetBody.png)
 
-* Click on the arrow in the Content drop-down box and from System select "Activity.Text"
+* Click on the arrow in the `Content` drop-down box and from System select `Activity.Text`
 ![Disable Boosting](../media/quest4/05-ActivityText.png)
 
-* Back on the main screen select the "Response type" to String
+* Back on the main screen select the `Response type` to `String`
 ![Disable Boosting](../media/quest4/06-StringResponse.png)
 
-* For the "Save response as" click on "Create a new variable"
+* For the `Save response as` click on `Create a new variable`
 ![Disable Boosting](../media/quest4/07-CreateNewVariables.png)
 
-* Change the name of the variable to "ResponseFromSAP" and make sure to select "Global" under Usage and check the box for "Allow to carry between sessions"
+* Change the name of the variable to `ResponseFromSAP` and make sure to select `Global` under Usage and check the box for `Allow to carry between sessions`
 ![Disable Boosting](../media/quest4/08-SetResponseFromSAP.png)
 
-* Delete the Condition flow. Select the three dots and click on Deletes
+* `Delete` the `Condition` flow. Select the three dots and click on `Delete`
 ![Disable Boosting](../media/quest4/09-DeleteCondition.png)
 
-* Click on the "+" to add the "Send message step"
+* Click on the `+` to add the `Send message step`
 ![Disable Boosting](../media/quest4/10-AddMessage.png)
 
-* CLick on the Send logo and select "Adaptive card"
+* Click on the `Send` icon and select `Adaptive card`
 ![Disable Boosting](../media/quest4/11-ChangeAdaptiveCard.png)
 
-* On the right hand side click on "Edit JSON" and select "Formula"
+* On the right hand side click on `Edit JSON` and select `Formula`
 ![Disable Boosting](../media/quest4/12-SwitchToFormular.png)
 
 * Now copy the following content to the body 
@@ -82,11 +82,10 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 
 ![Disable Boosting](../media/quest4/13-PasteACConent.png)
 
-* Now we can test the new functionalities. Enter something like "Show me products from SAP"
+* Now we can test the new functionalities. Enter something like `Show me products from SAP`
 ![Disable Boosting](../media/quest4/14-Test1.png)
-![Disable Boosting](../media/quest4/15-Test2.png)
 
-* You can also publish the new changes. Click on Publish on the left hand side, and Publish. Then you can click on the Demo Webiste 
+* You can also publish the new changes. Click on `Publish` on the left hand side, and `Publish`. Then you can click on the `Demo Webiste` 
 ![Disable Boosting](../media/quest4/16-Publish.png)
 
 * Test the bot on the demo site
