@@ -4,6 +4,8 @@
 
 Digitization of business processes and deriving intelligent action automatically is one of the mega trends across all industries globally. As part of this mission, should you choose to accept it, you will experience challenges and solution approaches firsthand acting as the much needed incubation team 🐣 of the Contoso Inc.
 
+You will be expanding your developer and architect horizon and ultimately be equipped to shape digitization efforts one step at a time. But first things first.
+
 ## 🧙🏾‍♀️Epic Quests
 
 Our journey will start from ...
@@ -18,44 +20,44 @@ Our journey will start from ...
 ## Meet your Mentors, learn more about the journey and kick-off
 
 🌟
-🕒 30 mins
+🕒 10 mins
 
-## [Quest 1](student/quest1.md) - 
+## [Quest 1](student/quest1.md) - Understand what we want to build
 
-🌟🌟🌟🌟
-🕒 1 h
+🌟
+🕒 5 min
 
-## [Quest 2](student/quest2.md) - 
+## [Quest 2](student/quest2.md) - Prepare your development environment
 
 🌟🌟🌟
-🕒 45 mins
+🕒 10 mins
 
 ⏳Take a natural break here if suitable.
 
-## [Quest 3](student/quest3.md) - 
+## [Quest 3](student/quest3.md) - The inner dev loop: Run your app in your dev environment
 
-🌟🌟🌟🌟
-🕒 1,5 h
+🌟🌟🌟
+🕒 25 min
 
-## [Quest 4](student/quest4.md) - 
+## [Quest 4](student/quest4.md) - Deploy your application to Azure
 
-🌟
-🕒 30 mins
+🌟🌟🌟
+🕒 40 mins
 
-## [Quest 5](student/quest5.md) - 
+## [Quest 5](student/quest5.md) - Protect your app with user authentication
 
 🌟🌟
-🕒 1 h
+🕒 25 h
 
-## [Quest 6](student/quest6.md) - 
+## [Quest 6](student/quest6.md) - Clean up your demo environment
 
 🌟
-🕒 30 mins
+🕒 5 mins
 
 Approach the last quest with a bang
 
 > [!TIP]
->🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
+>🏆Finish [quest 4](student/quest4.md), share your application link to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
 ## Where to next?
 
