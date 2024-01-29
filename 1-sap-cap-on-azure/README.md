@@ -6,9 +6,18 @@ Digitization of business processes and deriving intelligent action automatically
 
 You will be expanding your developer and architect horizon and ultimately be equipped to shape digitization efforts one step at a time. But first things first.
 
+## Pre-requisites
+
+- [Azure subscription](https://azure.microsoft.com/free/) with quota for at least 1 App Service Plan (B1) and 1 Azure Cosmos DB for PostgreSQL (citus) - Total Regional Coordinator Cores
+- [Authorization](https://learn.microsoft.com/entra/identity-platform/howto-create-service-principal-portal) to create resources in a resource group, Azure AD applications, and service principals in your Azure subscription
+- Dev environment setup as per the [dev-container](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/.devcontainer/devcontainer.json).
+  - [⭐Recommended] GitHub Codespaces fully configured out-of-the-box (ensure at least 2h of compute hours are left on your account)
+  - [⛕Alternative] VS Code with Docker Desktop and the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) or similar
+  - Manual installation and other IDEs like SAP Business Application Studio, Eclipse, etc. should also be possible but are not covered in this guide.
+
 ## 🧙🏾‍♀️Epic Quests
 
-Our journey will start from ...
+Our journey will start from the very beginning and will take you through the following quests:
 
 > [!NOTE]
 >🏋🏽‍♂️**Difficulty meter** (1 star = walk in the park | 5 stars = squeeze your brains out ): 🌟🌟🌟🌟🌟

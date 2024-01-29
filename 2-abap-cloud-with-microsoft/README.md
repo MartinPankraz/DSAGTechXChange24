@@ -6,6 +6,14 @@ Digitization of business processes and deriving intelligent action automatically
 
 You will be expanding your ABAP developer horizon and ultimately be equipped to shape digitization efforts one step at a time. But first things first.
 
+## Pre-requisites
+
+- [Azure subscription](https://azure.microsoft.com/free/) with quota for Azure OpenAI Service and authorization to access API keys
+- SAP S/4HANA Cloud ABAP environment (aka. Embedded Steampunk) 2022 or higher
+- SAP Authorization to create ABAP artifacts
+- Eclipse with ABAP Development Tools (ADT) installed (quest 1 leads you through the installation process)
+- Access to any Copilot experience using GPT (Bing, Azure AI Studio, ChatGPT, ...) for fine-tuning your prompt
+
 ## 🧙🏾‍♀️Epic Quests
 
 Our journey will start from SAP S/4HANA Cloud ABAP environment (aka. Embedded Steampunk) but your learnings will be applicable to BTP ABAP environment too. Also the ABAP SDKs used are usable with classic ABAP as well.

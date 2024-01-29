@@ -4,6 +4,11 @@
 
 Digitization of business processes and deriving intelligent action automatically is one of the mega trends across all industries globally. As part of this mission, should you choose to accept it, you will experience challenges and solution approaches firsthand acting as the much needed incubation team 🐣 of the Contoso Inc.
 
+## Pre-requisites
+
+- [Azure subscription](https://azure.microsoft.com/free/) with quota for Azure OpenAI Service and authorization to access API keys
+- 
+
 ## 🧙🏾‍♀️Epic Quests
 
 Our journey will start from ...
