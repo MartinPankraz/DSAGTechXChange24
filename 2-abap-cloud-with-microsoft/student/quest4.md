@@ -12,6 +12,9 @@ Now that you have a working prompt, you will add the Microsoft AI SDK for SAP to
 
 The [AI SDK for SAP](https://microsoft.github.io/aisdkforsapabap/) is available on GitHub and has already been installed via [abapGit](https://docs.abapgit.org/user-guide/getting-started/install.html) on the SAP lab system (S/4HANA 2022) before you entered the dungeon.
 
+> [!WARNING]
+> If you happen to run into "Object could not be locked" error on Eclipse blocking yourself, close the tab and re-open. Worst-case talk to your dungeon master to help you out on SM12.
+
 ### Enhance behavior of the RAP service
 
 1. Open your generated behavior implementation class object `ZBP_PROD_W_AI_##` and navigate to the "LCL_HANDLER" class using the `Local Types` tab at the bottom of the code view on Eclipse.
@@ -20,24 +23,24 @@ The [AI SDK for SAP](https://microsoft.github.io/aisdkforsapabap/) is available 
 
 2. Paste the following code (don't forget to replace the ## with your number) into the class definition. This implementation of method `generateDescriptionWithAI` will be used to generate the product description with the AI SDK for SAP. It executes `on save` of a new product during the create process.
 
-```abap
+```diff
 CLASS LCL_HANDLER DEFINITION INHERITING FROM CL_ABAP_BEHAVIOR_HANDLER.
   PRIVATE SECTION.
     METHODS:
       GET_GLOBAL_AUTHORIZATIONS FOR GLOBAL AUTHORIZATION
         IMPORTING
-           REQUEST requested_authorizations FOR ZPRODUCT_##
++           REQUEST requested_authorizations FOR ZPRODUCT_##
         RESULT result.
         
-      METHODS generateDescriptionWithAI FOR DETERMINE ON SAVE
-        IMPORTING keys FOR ZPRODUCT_##~GenerateDescriptionWithAI.
++      METHODS generateDescriptionWithAI FOR DETERMINE ON SAVE
++        IMPORTING keys FOR ZPRODUCT_##~GenerateDescriptionWithAI.
 ENDCLASS.
 
 CLASS LCL_HANDLER IMPLEMENTATION.
   METHOD GET_GLOBAL_AUTHORIZATIONS.
   ENDMETHOD.
   
-  METHOD generateDescriptionWithAI.
++  METHOD generateDescriptionWithAI.
   ENDMETHOD.
 ENDCLASS.
 ```
@@ -52,7 +55,7 @@ Your ABAP class is ready to be enhanced with the AI SDK for SAP. Before you do t
 
 1. Implement the `generateDescriptionWithAI` method on the LCL_HANDLER class you just opened. Use below code. Can you tell what it does?
 
-```abap
+```diff
 DATA:
       chatcompl_input  TYPE zif_peng_azoai_sdk_types=>ty_chatcompletion_input,
       chatcompl_output TYPE zif_peng_azoai_sdk_types=>ty_chatcompletion_output,
@@ -64,9 +67,9 @@ DATA:
         TRY.
             data(sdk_instance) = zcl_peng_azoai_sdk_factory=>get_instance( )->get_sdk(
                                                                       api_version = '2023-03-15-preview'
-                                                                      api_base    = 'https://to-be-replaced.openai.azure.com'
++                                                                      api_base    = 'https://to-be-replaced.openai.azure.com'
                                                                       api_type    = zif_peng_azoai_sdk_constants=>c_apitype-azure
-                                                                      api_key     = 'get from dungeon master'
++                                                                      api_key     = 'get from dungeon master'
                                                                     ).
           "Limit the tokens being used per OpenAI GPT request
           chatcompl_input-max_tokens = 4000.
@@ -80,8 +83,8 @@ DATA:
           <fs_message>-role = zif_peng_azoai_sdk_constants=>c_chatcompletion_role-user.
           <fs_message>-content = |Create a description for the product with    |.
           "
-          READ ENTITIES OF zr_prod_w_ai_## IN LOCAL MODE
-            ENTITY ZPROD_##
++          READ ENTITIES OF zr_prod_w_ai_## IN LOCAL MODE
++            ENTITY ZPROD_##
             ALL FIELDS WITH CORRESPONDING #( keys )
             RESULT DATA(Product).
 *          "Iterate through individual booking fields to get access to current RAP BO
@@ -107,8 +110,8 @@ DATA:
 
         if error is initial.
 
-            DATA update_line TYPE STRUCTURE FOR UPDATE zr_prod_w_ai_##\\ZPRODUCT_##.
-            Data update type table for update zr_prod_w_ai_##\\ZPRODUCT_##.
++            DATA update_line TYPE STRUCTURE FOR UPDATE zr_prod_w_ai_##\\ZPRODUCT_##.
++            Data update type table for update zr_prod_w_ai_##\\ZPRODUCT_##.
             clear update_line.
 
            update_line-%tky = myproduct-%tky.
@@ -121,11 +124,11 @@ DATA:
                           %msg = new_message_with_text(
                                    severity = if_abap_behv_message=>severity-information
                                    text     = 'error' )
-                        ) TO reported-ZPRODUCT_##.
++                        ) TO reported-ZPRODUCT_##.
         endif.
     " write back the AI generated Description to newly created booking before final save :-)
-    MODIFY ENTITIES OF zr_prod_w_ai_## IN LOCAL MODE
-      ENTITY ZPRODUCT_##
++    MODIFY ENTITIES OF zr_prod_w_ai_## IN LOCAL MODE
++      ENTITY ZPRODUCT_##
         UPDATE FIELDS ( Description )
         WITH update
     REPORTED DATA(update_reported)."collect issues into report
@@ -137,7 +140,7 @@ DATA:
                           %msg = new_message_with_text(
                                    severity = if_abap_behv_message=>severity-information
                                    text     = ex->get_text( ) )
-                        ) TO reported-ZPRODUCT_##.
++                        ) TO reported-ZPRODUCT_##.
   ENDTRY.
 ```
 

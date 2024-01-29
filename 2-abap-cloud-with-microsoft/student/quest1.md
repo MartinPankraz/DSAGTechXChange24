@@ -10,7 +10,11 @@ In this quest you will setup your environment, start Eclipse with ABAP Developme
 
 ## The path
 
-1. Make sure you have a suitable release of [Eclipse with ABAP Development Tools (ADT)](https://tools.hana.ondemand.com/#abap) installed. If not, install it now (e.g. Eclipse IDE for Java Developers)
+1. Make sure you have a suitable release of [Eclipse with ABAP Development Tools (ADT)](https://tools.hana.ondemand.com/#abap) installed.
+
+> [!NOTE]
+> If you don't have Eclipse yet, install it now (e.g. Eclipse IDE for Java Developers). Get ADT from the task menu `Help -> Install New Software...` and add the ABAP Development Tools update site `https://tools.hana.ondemand.com/latest`. Choose `ABAP Development Tools`.
+
 2. Start Eclipse and switch to the ABAP perspective.
 3. Move to the Project Explorer pane, click `New -> ABAP Project...`, select `new system connection` on the wizard and supply below info:
 

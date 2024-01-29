@@ -19,20 +19,20 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 3. Use the table definition below to enhance the initial table definition. Make sure to replace the ## with your assigned number.
 
-```abap
+```diff
 @EndUserText.label : 'Table holding Products with GenAI descriptions created'
 @AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
 @AbapCatalog.tableCategory : #TRANSPARENT
 @AbapCatalog.deliveryClass : #A
 @AbapCatalog.dataMaintenance : #RESTRICTED
-define table zprod_w_ai_## {
++define table zprod_w_ai_## {
   key client            : abap.clnt not null;
   key product_uuid      : abap.raw(16) not null;
   id                    : abap.numc(10);
-  name                  : abap.char(20);
+  name                  : abap.char(30);
   category              : abap.char(20);
   description           : abap.char(200);
-  @Semantics.amount.currencyCode : 'zprod_w_ai.currency_code'
++  @Semantics.amount.currencyCode : 'zprod_w_ai_##.currency_code'
   price                 : abap.curr(16,2);
   currency_code         : abap.cuky;
   local_created_by      : abp_creation_user;
@@ -95,7 +95,7 @@ With the current state of embedded steampunk the newly generated raw Fiori app h
 
 1. Open the metadata extension `ZC_PROD_W_AI_##` object and add the annotations below (don't forget to replace the ## with your number).
 
-```abap
+```diff
 @Metadata.layer: #CORE
 @UI: {
   headerInfo: {
@@ -103,7 +103,7 @@ With the current state of embedded steampunk the newly generated raw Fiori app h
     typeNamePlural: 'Products'
   }
 }
-annotate view ZC_PROD_W_AI_## with
++annotate view ZC_PROD_W_AI_## with
 {
   @UI.facet: [ {
     id: 'idIdentification', 
@@ -199,20 +199,20 @@ annotate view ZC_PROD_W_AI_## with
 > [!IMPORTANT]
 > Pay attention to the method `GenerateDescriptionWithAI`. This is where the magic happens. We will implement it in the next steps.
 
-```abap
-managed implementation in class ZBP_PROD_W_AI_## unique;
+```diff
++managed implementation in class ZBP_PROD_W_AI_## unique;
 strict ( 2 );
 with draft;
 
-define behavior for ZR_PROD_W_AI_## alias ZPRODUCT_##
-persistent table zprod_w_ai_##
-draft table ZPROD_W_AI_D_##
++define behavior for ZR_PROD_W_AI_## alias ZPRODUCT_##
++persistent table zprod_w_ai_##
++draft table ZPROD_W_AI_D_##
 etag master LocalLastChangedAt
 lock master total etag LastChangedAt
 authorization master( global )
 
 {
-  field ( readonly, numbering : managed )
++  field ( readonly, numbering : managed )
    ProductUUID;
 
   field ( readonly )
@@ -232,9 +232,9 @@ authorization master( global )
   draft action Resume;
   draft determine action Prepare;
 
-  determination GenerateDescriptionWithAI on save { create; }//field Description; }
++  determination GenerateDescriptionWithAI on save { create; }//field Description; }
 
-  mapping for ZPROD_W_AI_##
++  mapping for ZPROD_W_AI_##
   {
     ProductUUID = PRODUCT_UUID;
     ID = ID;
