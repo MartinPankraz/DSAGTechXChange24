@@ -10,10 +10,12 @@ You will be expanding your developer and architect horizon and ultimately be equ
 
 - [Azure subscription](https://azure.microsoft.com/free/) with quota for at least 1 App Service Plan (B1) and 1 Azure Cosmos DB for PostgreSQL (citus) - Total Regional Coordinator Cores
 - [Authorization](https://learn.microsoft.com/entra/identity-platform/howto-create-service-principal-portal) to create resources in a resource group, Azure AD applications, and service principals in your Azure subscription
-- Dev environment setup as per the [dev-container](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/.devcontainer/devcontainer.json).
-  - [⭐Recommended] GitHub Codespaces fully configured out-of-the-box (ensure at least 2h of compute hours are left on your account)
-  - [⛕Alternative] VS Code with Docker Desktop and the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) or similar
-  - Manual installation and other IDEs like SAP Business Application Studio, Eclipse, etc. should also be possible but are not covered in this guide.
+
+### Dev environment setup as per the [dev-container](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/.devcontainer/devcontainer.json)
+
+- [⭐Recommended] GitHub Codespaces fully configured out-of-the-box (ensure at least 2h of compute hours are left on your account)
+- [⛕alternatives not covered in this guide] VS Code with Docker Desktop and the [Dev Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) or similar
+- Manual installation and other IDEs like SAP Business Application Studio, Eclipse, etc. should also be possible but are not covered in this guide
 
 ## 🧙🏾‍♀️Epic Quests
 

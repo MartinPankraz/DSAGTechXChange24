@@ -12,7 +12,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 ### Generate RAP service
 
-1. Navigate to your pre-prepared package `ZDSAG_MSFT_AI_##` and create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
+1. Navigate to your empty pre-prepared package `ZDSAG_MSFT_AI_##` and create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
 2. Find it under Dictionary -> Database Tables and double-click on it.
 
 ![Screenshot of table create experience](../media/quest2-1.png)
