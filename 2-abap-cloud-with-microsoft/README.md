@@ -20,11 +20,11 @@ This lab was conducted with S/4HANA 2022.
 >The guide and screenshots refer to the English terms. We recommend to **adjust your browser language to English** to avoid confusion. Some of the translated texts can be misleading.
 
 > [!IMPORTANT]
-> Code sections on the copy-snippets that need special attention are highlighted in green.
-> ```diff
-> +define table zprod_w_ai_## {
-> ```
-> Please make sure to replace the placeholder ## with your assigned number.
+> Code sections on the copy-snippets that need special attention are highlighted in green. Please make sure to replace the placeholder ## with your assigned number.
+
+```diff
++define table zprod_w_ai_## {
+```
 
 ## Meet your Mentors, learn more about the journey and kick-off
 
