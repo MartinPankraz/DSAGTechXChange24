@@ -84,7 +84,7 @@ DATA:
           <fs_message>-content = |Create a description for the product with    |.
           "
 +          READ ENTITIES OF zr_prod_w_ai_## IN LOCAL MODE
-+            ENTITY ZPROD_##
++            ENTITY ZPRODUCT_##
             ALL FIELDS WITH CORRESPONDING #( keys )
             RESULT DATA(Product).
 *          "Iterate through individual booking fields to get access to current RAP BO
