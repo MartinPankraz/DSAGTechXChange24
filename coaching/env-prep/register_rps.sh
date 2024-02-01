@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./subids.sh
+source ./env.sh
 RPS=("Microsoft.KeyVault" "Microsoft.ContainerInstance" "Microsoft.DBforPostgreSQL")
 
 for s in "${SUBIDS[@]}"; do
