@@ -1,4 +1,4 @@
-# Quest 1 - Leveraging GPT to create images
+ # Quest 1 - Leveraging GPT to create images
 
 **[🏠Home](../README.md)** - [ Quest 2 >](quest2.md)
 
@@ -31,7 +31,7 @@ In cartoon style a group of people in a city like Hamburg learning all about SAP
 Like with all prompting it is important to learn how to work with the AI and create the best results. 
 You can test out some ideas using the following links:
 
-- [Person in City](https://designer.microsoft.com/image-creator?p=A+business+[woman]+learning+all+about+SAP+and+AI+in+a+city+like+[Hamburg],cute,+detailed+[pencil]+sketch.+The+image+should+be+reusable+for+the+icon+of+a+chatbot)
+- [Person in City](https://designer.microsoft.com/image-creator?p=A+business+[woman]+learning+all+about+SAP+and+AI+in+a+city+like+[Hamburg],+detailed+[pencil]+sketch.+The+image+should+be+reusable+for+the+icon+of+a+chatbot)
 - [Fruite Arrangements](https://designer.microsoft.com/image-creator?p=A+photorealistic+image+of+%5Bfruit%5D+arranged+to+look+like+the+shape+of+%5Ba+disney+castle%5D.+The+food+should+be+creativity+assembled+to+mimic+the+%5Bscene+from+the+disney+castle%5D.+The+image+should+be+colorful+and+appealing)
 
  

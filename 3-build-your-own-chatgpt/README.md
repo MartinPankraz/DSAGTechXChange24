@@ -6,8 +6,13 @@ Digitization of business processes and deriving intelligent action automatically
 
 ## Pre-requisites
 
-- [Azure subscription](https://azure.microsoft.com/free/) with quota for Azure OpenAI Service and authorization to access API keys
-- 
+- [Microosft Outlook](https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook) Microsoft ID / User / Email Adress, e.g. lastname@outlook.com, user@hotmail.com, ...
+
+> [!NOTE]
+>🏋🏽Only required if you are **not** using this as part of a prepared Hands-on session (e.g. DSAG)
+>- [Azure subscription](https://azure.microsoft.com/free/) with quota for Azure OpenAI Service and authorization to access API keys
+>- [Microsoft 365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program) to create a Work / School account which can be used to access Copilot Studio
+>- [Power Automate License](https://powerapps.microsoft.com/en-us/developerplan/) get be request via the Power Apps Developer Plan 
 
 ## 🧙🏾‍♀️Epic Quests
 
