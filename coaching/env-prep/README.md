@@ -1,4 +1,6 @@
 # Preparing the coaching environment
 
-# :construction: TODOS
-- Add permission to purge deleted Key Vaults.
+- Create a copy of `env.sh.template` as `env.sh`.
+- Replace values in your `env.sh`.
+- Register required resource provides with `register_rps.sh`
+- Create users with `provision_users.sh`. (Note: Users will be disabled by default; change the parameter in `az ad user update` if required).
