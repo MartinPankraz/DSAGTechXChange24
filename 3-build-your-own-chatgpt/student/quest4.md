@@ -4,7 +4,7 @@
 
 So far we have only accessed static information from either the public internet or documents that we had uploaded. Now we want to connect to an SAP system. Data in the SAP system can change frequently. So instead of indexing the information, we want to do a live query to the SAP and return some information. 
 
-As before we will use the power of generative AI to help us interact with the bot and understand the question. In order to simplify the flow in the chatbot, we will disable the system trigger "Conversational boosting" and only focus on the "Fallback" trigger, which then will call a Power Automate FLow. 
+As before we will use the power of generative AI to help us interact with the bot and understand the question. In order to simplify the flow in the chatbot, we will disable the system trigger "Conversational boosting" and only focus on the "Fallback" trigger, which then will call a Power Automate flow. 
 This Power Automate flow is pre-build and basically takes the input from the Copilot Studio chabot, extracts the intend and asks the SAP ES5 system for product information. 
 
 > [!NOTE]
