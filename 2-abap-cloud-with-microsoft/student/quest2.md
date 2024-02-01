@@ -12,8 +12,14 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 ### Generate RAP service
 
+> [!IMPORTANT]
+> Always save and activate your objects before testing.
+
 1. Navigate to your empty pre-prepared package `ZDSAG_MSFT_AI_##` and create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
 2. Find it under Dictionary -> Database Tables and double-click on it.
+
+> [!NOTE]
+> The screenshot below shows an already populated RAP service. Yours will be empty.
 
 ![Screenshot of table create experience](../media/quest2-1.png)
 
@@ -262,7 +268,7 @@ authorization master( global )
 3. Select the Entity Set and click on `Preview` to open the Fiori preview.
 
 > [!WARNING]
-> Ad-hoc lab systems are often not fully configured for ease of effort. Deal with the dummy domain challenge by replacing with the IP address you got from your dungeon master earlier. Ignore the SSL certificate error and continue. Provide your credentials to logon to the Fiori preview.
+> Ad-hoc lab systems are often not fully configured for ease of effort. Deal with the dummy nodomain challenge (vhcals4hci.dummy.nodomain) by replacing with the IP address you got from your dungeon master earlier. Ignore the SSL certificate error and continue. Provide your credentials to logon to the Fiori preview.
 
 4. On the spawned browser session, create a new product entry, and save it.
 

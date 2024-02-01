@@ -36,7 +36,7 @@ Logon to your project with below info:
 | Client | `000` |
 | Language | `EN` |
 
-4. Find your dedicated package `ZDSAG_MSFT_AI_##`, right-click and choose `Add to Favorite Packages` and open its properties view (double click on the Project Explorer item).
+4. Find your dedicated empty package `ZDSAG_MSFT_AI_##`, right-click and choose `Add to Favorite Packages` and open its properties view (double click on the Project Explorer item).
 5. See the selected setting `ABAP for Cloud Development` for `Default ABAP Language Version` on the "General Data" section of your package. If it is not set, please set it now.
 
 That wasn't too hard, was it? Now you are ready to start your journey.

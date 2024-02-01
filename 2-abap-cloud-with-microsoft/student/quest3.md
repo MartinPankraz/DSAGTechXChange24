@@ -13,7 +13,7 @@ Alternatively, you may use [Azure AI Studio](https://ai.azure.com/) or [ChatGPT]
 ## The path
 
 > [!WARNING]
-> If you don't want sign-in with Bing, you are limited to 4 prompts per day. If you want to use more prompts, you need to sign-in with your Microsoft account.
+> If you don't want to sign-in with Bing, you are limited to 4 prompts per day. If you want to use more prompts, you need to sign-in with your Microsoft account.
 
 1. Get started with the following prompts:
 
