@@ -168,7 +168,11 @@ Optionally add a breakpoint on Eclipse and see your AI request in action step by
 > [!TIP]
 >🏆Finish the final quest and send [us](mailto:martin.pankraz@microsoft.com) a Screenshot of your Fiori screen with the best AI-generated product description to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
-Let your coaches now what you liked best and which AI scenario you will be testing next in your own projects.
+Let your coaches know what you liked best and which AI scenario you will be testing next in your own projects.
+
+## (Optional) Elevate your AI game and train some more
+
+You are one of the fast ones, huh? If so, apply your learnings from today and enhance the ABAP code to generate categories. This time no snippets ;-) Good luck!
 
 ## Manual product create is ok for now, but what about automation?
 
