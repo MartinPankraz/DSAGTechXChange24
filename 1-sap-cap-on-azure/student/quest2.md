@@ -6,7 +6,7 @@ In this quest, you will prepare your development environment for this tutorial. 
 
 - Log in to Github
 
-- In a new browser tab, browse to [Azure-Samples/app-service-javascript-sap-cloud-sdk-quickstart: Sample project showcasing SAP Cloud SDK for OData consumption from SAP S4 with Azure App Service](https://github.com/Azure-Samples/app-service-javascript-sap-cloud-sdk-quickstart).
+- In a new browser tab, browse to [Azure-Samples/app-service-javascript-sap-cap-quickstart: Sample project showcasing SAP Cloud Application Programming Model (CAP) consumption from SAP S4 with Azure App Service](https://github.com/Azure-SAmples/app-service-javascript-sap-cap-quickstart).
 
 - Fork the repository into your own GitHub account.
   
