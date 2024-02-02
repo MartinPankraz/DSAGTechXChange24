@@ -23,44 +23,38 @@ Our journey will start from ...
 >⏱Allow ~2 hours to complete your journey
 
 > [!IMPORTANT]
->The guide and screenshots refer to the English terms. We recommend to **adjust your browser language to English** to avoid confusion. Some of the translated texts can be misleading. 
+>The guide and screenshots refer to the English terms. We recommend to **adjust your browser language to English** to avoid confusion. Otherwise some of the translated texts can be misleading. 
 
 ## Meet your Mentors, learn more about the journey and kick-off
 
 🌟
-🕒 30 mins
+🕒 20 mins
 
 ## [Quest 1](student/quest1.md) - Using Gen AI to create images
 
-🌟🌟🌟🌟
-🕒 1 h
+🌟
+🕒 15 min
+>Use AI Image creator to generate your own content ... make it personal!
 
-## [Quest 2](student/quest2.md) - 
+## [Quest 2](student/quest2.md) - Create your first own Chatbot 
 
-🌟🌟🌟
-🕒 45 mins
+🌟🌟
+🕒 25 mins
+>Lets start with your first own chatbot you ever created, it's easy! 
 
 ⏳Take a natural break here if suitable.
 
-## [Quest 3](student/quest3.md) - 
+## [Quest 3](student/quest3.md) - Extend your Chatbot with more Data
+
+🌟🌟🌟
+🕒 30 min
+>Check out how easy it is to extend the chatbot capabilities ...
+
+## [Quest 4](student/quest4.md) - Lets Chat with a real SAP system
 
 🌟🌟🌟🌟
-🕒 1,5 h
-
-## [Quest 4](student/quest4.md) - 
-
-🌟
 🕒 30 mins
-
-## [Quest 5](student/quest5.md) - 
-
-🌟🌟
-🕒 1 h
-
-## [Quest 6](student/quest6.md) - 
-
-🌟
-🕒 30 mins
+>Now we do some advanced exercise. Chat with SAP data!
 
 Approach the last quest with a bang
 

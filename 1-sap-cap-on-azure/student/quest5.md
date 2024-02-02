@@ -90,14 +90,20 @@ So far, your application is open to anyone on the internet and does not require 
 
 - While the `azd deploy` is still running, go back to the Azure protal, and open up the "Authentication" blade in the "Settings" section of your App Service resource. See, that the application will now require authentication and redirect any unauthenticated request to the identiy provider's login page.
 
-  ![](2024-01-23-08-45-34.png)
+  ![](assets/2024-01-23-08-45-34.png)
 
 - Once `azd deploy` has terminated, go back to the Overview blade and open your application again by clicking the "Default domain" link. Your application will now redirect you to the well-known Entra ID login page. After selecting your account and granting the permission to access your (test account's) profile data, the landing page of your application will open up:
 
-  ![](2024-01-23-09-01-16.png)
+  ![](assets/2024-01-23-09-01-16.png)
 
-  ![](2024-01-23-09-06-26.png)
+  ![](assets/2024-01-23-09-06-26.png)
 
+
+## Towards role-based user authorization
+
+Authenticating the user is a necessary first step to protect your workload and data but not always sufficient. CAP allows to to implement your own role-based access control rules, while using Microsoft Entra ID to manage user permissions with application roles and group memberships. Offloading access management to Entra ID allows you to use your standardized IAM workflows and benefit from capabilities like [access reviews](https://learn.microsoft.com/en-us/entra/id-governance/access-reviews-overview) for your application.
+
+You can find more guidance in the documentation of the npm package [cds-entra-id](https://www.npmjs.com/package/cds-entra-id) or in the project documentation [here](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/documentation/AUTHENTICATION.md).
 
 ## Towards SAP Principal propagation
 

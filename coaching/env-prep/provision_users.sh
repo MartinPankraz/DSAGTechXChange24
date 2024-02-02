@@ -6,7 +6,7 @@ source ./env.sh
 # Create users
 for i in $(seq 1 $NUMBER_OF_USERS);
 do
-    # PASSWORD=$FIX_PASSWORD #$(randpw)
+    PASSWORD=$FIX_PASSWORD #$(randpw)
     az ad user create \
         --display-name "MicroHack Participant ${i}" \
         --password "${PASSWORD}" \

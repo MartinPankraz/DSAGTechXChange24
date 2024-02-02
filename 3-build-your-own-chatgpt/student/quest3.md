@@ -12,6 +12,9 @@ Examples can be found here:
 - https://www.sap.com/investors/en/reports.html?sort=latest_desc&tab=reports#reports
 - https://www.microsoft.com/en-us/Investor/annual-reports.aspx
 
+> [!NOTE]
+> It can take up to 15 minutes until the documents are indexed. 
+
 * Upload a private document in Txt or PDF format with Drag&Drop
  ![Sign In](../media/quest3/02-UploadDocuments.png)
 
