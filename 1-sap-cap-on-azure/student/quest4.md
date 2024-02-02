@@ -228,10 +228,9 @@ As managed service, the "App Service" resource hosting your application comes wi
   az webapp log tail --resource-group [YOUR RESOURCE GROUP NAME HERE] --name [YOUR APP SERVICE NAME HERE]
   ```
 
-
 ## Claim your badge now! 🎖️
 
-Congratulations! You have successfully completed this tutorial and can show your friends that you have now successfully deployed you SAP CAP application to Azure App Services. To claim your badge, you need a URL and an access code from your coaches. Therefore, please send short mail to the address shared in your session and share the link to your application with them.
+Congratulations! You have successfully completed this tutorial and can show your friends that you have now successfully deployed you SAP CAP application to Azure App Services. To claim your badge, you need an URL and an access code from your coaches. Therefore, please send a short mail to your [dungeon masters](mailto:martin.pankraz@microsoft.com) and share the link to your application. They will respond with the passphrase upon successful verification.
 
 ```
 To:       [Coaches' mail address.]
