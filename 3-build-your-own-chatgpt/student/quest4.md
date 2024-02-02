@@ -18,10 +18,10 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 ![Disable Boosting](../media/quest4/02-AddHTTPAction.png)
 
 * Change the Method to `Post` and use the following URL to call a preconfigured Power Automate flow that handles the connection to the SAP system. 
-```http
-https://prod-117.westus.logic.azure.com:443/workflows/2b7d54acc9e94c3b93dee086b4d28a96/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rez20vuZsRsAa3glEQGqzjQj5Enn5UELQEQxcFJP2rY
-```
-![Disable Boosting](../media/quest4/03-SelectMethod.png)
+  ```http
+  https://prod-117.westus.logic.azure.com:443/workflows/2b7d54acc9e94c3b93dee086b4d28a96/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rez20vuZsRsAa3glEQGqzjQj5Enn5UELQEQxcFJP2rY
+  ```
+  ![Disable Boosting](../media/quest4/03-SelectMethod.png)
 
 * Under `Headers and body` Click on `Edit` and on the right hand side, select `Raw content` from the drop-box
 ![Disable Boosting](../media/quest4/04-SetBody.png)
@@ -51,48 +51,54 @@ https://prod-117.westus.logic.azure.com:443/workflows/2b7d54acc9e94c3b93dee086b4
 ![Disable Boosting](../media/quest4/12-SwitchToFormular.png)
 
 * Now copy the following content to the body 
-```json
-{
-  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
-  type: "AdaptiveCard",
-  version: "1.5",
-  body: [
+    ```json
+    {
+      '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+      type: "AdaptiveCard",
+      version: "1.5",
+      body: [
+    
+    
+            {
+                type: "ColumnSet",
+                columns: [
+                    {
+                        type: "Column",
+                        width: 1,
+                        items: [
+                            {
+                                type: "TextBlock",
+                                text: Global.ResponseFromSAP,
+                                size: "Medium",
+                                wrap: true,
+                                style: "normal",
+                                fontType: "Default"
+                            }
+                        ]
+                    }
+                ]
+            }
+      ]
+    }
 
+    ```
 
-        {
-            type: "ColumnSet",
-            columns: [
-                {
-                    type: "Column",
-                    width: 1,
-                    items: [
-                        {
-                            type: "TextBlock",
-                            text: Global.ResponseFromSAP,
-                            size: "Medium",
-                            wrap: true,
-                            style: "normal",
-                            fontType: "Default"
-                        }
-                    ]
-                }
-            ]
-        }
-  ]
-}
+  ![Disable Boosting](../media/quest4/13-PasteACConent.png)
 
-```
-
-![Disable Boosting](../media/quest4/13-PasteACConent.png)
+* Close the pop-up pane on the right by clicking the `X` in the upper right corner.
 
 * Now we can test the new functionalities. Enter something like `Show me products from SAP`
-![Disable Boosting](../media/quest4/14-Test1.png)
+    ![Disable Boosting](../media/quest4/14-Test1.png)
+
+* Feel free to continue the conversation with the bot. (E.g., by responding with `Speakers, please.` if you're asked which category you are interested in.)
+
+* Save your changes by clicking the button int he upper right corner.
 
 * You can also publish the new changes. Click on `Publish` on the left hand side, and `Publish`. Then you can click on the `Demo Webiste` 
-![Disable Boosting](../media/quest4/16-Publish.png)
+    ![Disable Boosting](../media/quest4/16-Publish.png)
 
 * Test the bot on the demo site
-![Disable Boosting](../media/quest4/17-DemoWebsite.png)
+   ![Disable Boosting](../media/quest4/17-DemoWebsite.png)
 
 
 
