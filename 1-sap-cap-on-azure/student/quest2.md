@@ -10,9 +10,9 @@ In this quest, you will prepare your development environment for this tutorial. 
 
 - Fork the repository into your own GitHub account.
   
-  ![](2024-01-10-14-43-51.png)
+  ![](assets/2024-01-10-14-43-51.png)
 
-  ![](2024-01-24-16-57-28.png)
+  ![](assets/2024-01-24-16-57-28.png)
 
 ## Prepare your development environment
 
@@ -35,21 +35,21 @@ You have two options:
 
 - Create a new Codespace on main:
 
-  ![](2024-01-10-14-57-12.png)
+  ![](assets/2024-01-10-14-57-12.png)
 
 > [!TIP]
 > Every GitHub user account comes with a [free plan](https://github.com/features/codespaces) that will allow running codespaces for a limited amount of time.
 
 - Wait a couple of seconds until deployment of your code space has terminated:
 
-  ![](2024-01-10-14-57-59.png)
+  ![](assets/2024-01-10-14-57-59.png)
 
   Following the 'logs', you can see how GitHub prepares the your development environment by installing all prerequesites for your development cycle.
 
 
 - Once your dev container is available, you'll see VS Code with your repo opened in your browser: 
 
-  ![](2024-01-10-15-01-13.png)
+  ![](assets/2024-01-10-15-01-13.png)
 
 > [!TIP]
 > <details><summary>If you are not yet familiar with VS Code...</summary>
@@ -88,7 +88,7 @@ You have two options:
     }
   ```
 
-  ![](2024-01-10-15-10-03.png)
+  ![](assets/2024-01-10-15-10-03.png)
 
 > [!IMPORTANT]
 > When showing output of CLI interaction, we will in most cases show the text output and avoid adding the respective screenshots. Please don't worry if coloring and formatting slightly differ.
@@ -102,29 +102,29 @@ You have two options:
 
 - Make sure you have the extension "GitHub Codespaces" installed.
 
-  ![](2024-01-10-15-31-25.png)
+  ![](assets/2024-01-10-15-31-25.png)
 
 - Once installed, open the command palette by pressing `Ctrl + Alt + p`, type `Codespaces` and select `Connect to codespace`:
   
-  ![](2024-01-10-15-32-35.png)
+  ![](assets/2024-01-10-15-32-35.png)
 
 - Login to GitHub from VS Code.
 
-  ![](2024-01-10-15-33-27.png)
+  ![](assets/2024-01-10-15-33-27.png)
 
 - Select the codespace you have just created.
 
-  ![](2024-01-10-15-34-21.png)
+  ![](assets/2024-01-10-15-34-21.png)
 
 - See how VS Code refreshes and loads your repo content in your local VS Code window.
 
 - Open a new Terminal and run `az version` and `azd version`.
 
-  ![](2024-01-10-15-37-03.png)
+  ![](assets/2024-01-10-15-37-03.png)
 
   You might also want to run command `hostname` and `uname -a` to see that these commands effectively run on your Codespace (and not your developer machine):
 
-  ![](2024-01-10-15-39-10.png)
+  ![](assets/2024-01-10-15-39-10.png)
 
   
 

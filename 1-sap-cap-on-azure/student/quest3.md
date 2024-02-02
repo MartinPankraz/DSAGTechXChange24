@@ -46,13 +46,13 @@ In this quest, you will set up and test your own development environment for you
 
   In VS Code, open the Ports tab; it will show you forwardings for the two ports specified in `pg.yml`. 
 
-  ![](2024-01-23-18-41-07.png)
+  ![](assets/2024-01-23-18-41-07.png)
 
 - Open Adminer. 
 
   [Adminer](https://www.adminer.org/) (the predecessor of phpMyAdmin) is tool to manage a variety of different databases. In line for port `8080`, click 'Open in Browser' in the "Forwarded Address" column in VS Code. In the new tab, log in to the database running in your docker container by using the credentials specified in `pg.yml`. 
   
-  ![](2024-01-11-08-19-40.png)
+  ![](assets/2024-01-11-08-19-40.png)
 
   Note there are no resources defined yet.
 
@@ -86,19 +86,19 @@ In this quest, you will set up and test your own development environment for you
 
   This will populate the PostgreSQL database; open the Adminer interface and / or refresh the view. See that some tables have been created and partially populated with initial data (e.g., `cds_model`):
 
-  ![](2024-01-23-18-49-26.png)
+  ![](assets/2024-01-23-18-49-26.png)
 
   Using the Ports tab of your VS Code, open the application via its exposed port 4004.
 
-  ![](2024-01-23-18-49-52.png)
+  ![](assets/2024-01-23-18-49-52.png)
 
   To test integration with the ODATA provider, click the link to `index.html` below "Web Applications" and follow your terminal in VS Code. 
   
-  ![](2024-01-23-18-51-18.png)
+  ![](assets/2024-01-23-18-51-18.png)
   
   On first click, you can track the call to the REST endpoint and see the results in the browser (after that, data will be cached in the PostgreSQL db):
 
-  ![](2024-01-11-09-02-10.png)
+  ![](assets/2024-01-11-09-02-10.png)
 
   ```
   [odata] - GET /odata/v4/api-business-partner/BusinessPartnersLocal 

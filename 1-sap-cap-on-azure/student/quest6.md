@@ -37,7 +37,7 @@ This is the final quest of this tutorial. We hope you enjoyed the experience and
 
 - Also, don't forget to log out from the Azure Portal.
 
-  ![](2024-01-23-09-19-08.png)
+  ![](assets/2024-01-23-09-19-08.png)
 
 ## Where to next?
 

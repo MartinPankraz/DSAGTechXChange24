@@ -90,13 +90,13 @@ So far, your application is open to anyone on the internet and does not require 
 
 - While the `azd deploy` is still running, go back to the Azure protal, and open up the "Authentication" blade in the "Settings" section of your App Service resource. See, that the application will now require authentication and redirect any unauthenticated request to the identiy provider's login page.
 
-  ![](2024-01-23-08-45-34.png)
+  ![](assets/2024-01-23-08-45-34.png)
 
 - Once `azd deploy` has terminated, go back to the Overview blade and open your application again by clicking the "Default domain" link. Your application will now redirect you to the well-known Entra ID login page. After selecting your account and granting the permission to access your (test account's) profile data, the landing page of your application will open up:
 
-  ![](2024-01-23-09-01-16.png)
+  ![](assets/2024-01-23-09-01-16.png)
 
-  ![](2024-01-23-09-06-26.png)
+  ![](assets/2024-01-23-09-06-26.png)
 
 
 ## Towards role-based user authorization

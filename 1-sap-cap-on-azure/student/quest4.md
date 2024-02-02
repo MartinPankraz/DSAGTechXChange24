@@ -30,7 +30,7 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 - Locate the resource group having the name of your username.
 
-  ![](2024-01-12-07-55-03.png)
+  ![](assets/2024-01-12-07-55-03.png)
 
 ## Login from your development terminal
 
@@ -54,9 +54,9 @@ In this quest, you will bring your application to the Azure cloud to make it ava
   To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code CWVM7T7L5 to authenticate.
   ```
 
-  ![](2024-01-17-10-24-53.png)
+  ![](assets/2024-01-17-10-24-53.png)
 
-  ![](2024-01-17-08-05-11.png)
+  ![](assets/2024-01-17-08-05-11.png)
 
 - Do the same exercise for the Azure Developer CLI. 
 
@@ -200,19 +200,19 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 - Confirm a set of resources have been deployed to host your application.
 
-  ![](2024-01-15-07-54-48.png)
+  ![](assets/2024-01-15-07-54-48.png)
 
 - The resource of type "App Service" is hosting your application. Open that one up and locate the URL endpoint for this application.
 
-  ![](2024-01-15-08-13-16.png)
+  ![](assets/2024-01-15-08-13-16.png)
 
 - Open the application by clicking the link behing "Default domain" and do a first smoke test of your application.
 
-  ![](2024-01-15-08-14-17.png)
+  ![](assets/2024-01-15-08-14-17.png)
 
 - Click the link to `index.html` below "Web Applications" to retrieve some data from the OData service.
 
-  ![](2024-01-17-19-07-04.png)
+  ![](assets/2024-01-17-19-07-04.png)
 
 ## Inspect the application log
 
@@ -220,7 +220,7 @@ As managed service, the "App Service" resource hosting your application comes wi
 
 - Typically, there are different paths to achieve the same goal. One way to view the application log is to open the Azure Portal, browse to App Service resource and open up the "Logstream" blade in the "Monitoring" section:
 
-  ![](2024-01-17-18-21-02.png)
+  ![](assets/2024-01-17-18-21-02.png)
 
 - For automation or if you feel more comfortable using the command-line interface (CLI), you can equally invoke the command 
 
@@ -283,25 +283,25 @@ To store application data, an instance of [Azure Cosmos DB for PostgreSQL docume
 
 - In the [Azure Portal (https://portal.azure.com)](https://portal.azure.com), browse to the resource of type "Azure Cosmos DB for PostgreSQL Cluster" in your resource group; this resource represents your database cluster. Copy the FQDN specified as "Coordinator name" to your clipboard and paste in the "host" field of your Adminer login page.
 
-  ![](2024-01-17-19-01-15.png)
+  ![](assets/2024-01-17-19-01-15.png)
 
 - The secret password for the admin username has been stored in the Key Vault resource in your resource group.  Browse to your vault, open the "Secrets" blade and select item `kv-secret-cosmosdb-password`. 
 
-  ![](2024-01-17-19-04-02.png)
+  ![](assets/2024-01-17-19-04-02.png)
 
   Klick the id of the "Current Version" and copy the secret value to your clipoard.
 
-  ![](2024-01-17-19-04-14.png)
+  ![](assets/2024-01-17-19-04-14.png)
 
-  ![](2024-01-17-19-04-36.png)
+  ![](assets/2024-01-17-19-04-36.png)
 
 - Login to your cloud-hosted database using Adminer
 
-  ![](2024-01-17-19-05-38.png)
+  ![](assets/2024-01-17-19-05-38.png)
 
   ...and select table `businesspartnerlocal` and click select to verify data from OData service got loaded into the database:
 
-  ![](2024-01-17-19-08-31.png)
+  ![](assets/2024-01-17-19-08-31.png)
 
 > [!TIP]
 > If the table is empty, you might not yet have triggerd data population from the OData service by launching your application from the startup landing page.
@@ -319,27 +319,27 @@ To ensure security an application you deploy to Azure, one crucial point is to p
 
 - In the "Objects" section, select the "Secrets" blade. It will list four secrets (like passwords or API keys) stored in the vault.
 
-  ![](2024-01-23-08-04-29.png)
+  ![](assets/2024-01-23-08-04-29.png)
 
 - For example, klick "kv-secred-odata-password", and the opening page, click the latest secret version.
 
-  ![](2024-01-23-08-08-01.png)
+  ![](assets/2024-01-23-08-08-01.png)
 
 - This will show you some meta data and, at the bottom of the page, a button to show the secret value:
 
-  ![](2024-01-23-08-08-57.png)
+  ![](assets/2024-01-23-08-08-57.png)
 
 #### Explore the App Service's Managed Identity
 
 - Open your App Service resource and browse to the "Identity" blade in the "Settings" seciton. Verify the state is "On".
 
-  ![](2024-01-23-07-32-23.png)
+  ![](assets/2024-01-23-07-32-23.png)
 
   This will allow your application (including your custom-code) to rely on platform capabilities to access other Azure resources. 
 
 - Open the "Configuration" blade; the "Application Settings" lists all parameters that will be supplied to your application as environment variables. To explore the values, click the "Show values" button.
 
-  ![](2024-01-23-07-37-39.png)
+  ![](assets/2024-01-23-07-37-39.png)
 
 - Explore the settings that contain secret values (e.g., `ODATA_USERPWD`); instead of specifying the value explicity, it refers to your Azure Key Vault. 
 
@@ -352,7 +352,7 @@ To ensure security an application you deploy to Azure, one crucial point is to p
 
 - Go to the Key Vault and open the "Access policies" blade. You see that the Key Vault uses the App Service's managed identity to authorize access.
 
-  ![](2024-01-23-07-42-18.png)
+  ![](assets/2024-01-23-07-42-18.png)
 
 
 
