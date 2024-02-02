@@ -34,11 +34,13 @@ Our journey will start from ...
 
 🌟
 🕒 15 min
+Use AI Image creator to generate your own content ... make it personal!
 
 ## [Quest 2](student/quest2.md) - Create your first own Chatbot 
 
 🌟🌟
 🕒 25 mins
+Lets start with your first own chatbot you ever created, it's easy! 
 
 ⏳Take a natural break here if suitable.
 
@@ -46,12 +48,13 @@ Our journey will start from ...
 
 🌟🌟🌟
 🕒 30 min
+Check out how easy it is to extend the chatbot capabilities ...
 
 ## [Quest 4](student/quest4.md) - Lets Chat with a real SAP system
 
 🌟🌟🌟🌟
 🕒 30 mins
-
+Now we do some advanced exercise. Chat with SAP data!
 
 Approach the last quest with a bang
 
