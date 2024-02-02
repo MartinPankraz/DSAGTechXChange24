@@ -99,6 +99,12 @@ So far, your application is open to anyone on the internet and does not require 
   ![](2024-01-23-09-06-26.png)
 
 
+## Towards role-based user authorization
+
+Authenticating the user is a necessary first step to protect your workload and data but not always sufficient. CAP allows to to implement your own role-based access control rules, while using Microsoft Entra ID to manage user permissions with application roles and group memberships. Offloading access management to Entra ID allows you to use your standardized IAM workflows and benefit from capabilities like [access reviews](https://learn.microsoft.com/en-us/entra/id-governance/access-reviews-overview) for your application.
+
+You can find more guidance in the documentation of the npm package [cds-entra-id](https://www.npmjs.com/package/cds-entra-id) or in the project documentation [here](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/documentation/AUTHENTICATION.md).
+
 ## Towards SAP Principal propagation
 
 In the interest of time and simplicity, we have been using a single account to connect to the backing SAP system via OData. In an enterprise-grade scenario, you will want to use the individual user's identity to access the OData service to query or change data. This requires your application to map the user's Entra identity to his / her identity in the SAP system. You can achieve this with the help of SAP Principal Propagation and Azure API Management (APIM) as described [here](https://learn.microsoft.com/azure/api-management/sap-api#production-considerations). 

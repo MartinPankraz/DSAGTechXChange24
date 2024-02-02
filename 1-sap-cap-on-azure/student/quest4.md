@@ -355,6 +355,17 @@ To ensure security an application you deploy to Azure, one crucial point is to p
   ![](2024-01-23-07-42-18.png)
 
 
+
+### (optional) Debug the application on Azure
+
+Once in a while, you may need to connect to your application running on Azure to debug your source code. VS Code allows you to remotely debug a Node.js application running on Azure directly from your IDE as described [here](https://code.visualstudio.com/docs/azure/remote-debugging). This capability comes with the [Azure App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) that  also allows you to perform administrative tasks like restarting from your IDE.
+
+To set up remote debugging for this CAP project, follow [this step-by-step guide](http://...) in the project repository.
+:construction: Add link to repo once guide is there.
+
+> [!TIP]
+> If you use other Azure platform services in your own project, you may want to browse the marketplace for Visual Studio Code. There are a lot of extensions avaialble which are maintained and published by Microsoft and the community. Just select Categoriy `Azure` in search field or click this link: [https://marketplace.visualstudio.com/search?target=VSCode&category=Azure&sortBy=Publisher](https://marketplace.visualstudio.com/search?target=VSCode&category=Azure&sortBy=Publisher).
+
 ## Where to next?
 
 [ < Quest 3 ](quest3.md) - **[🏠Home](../README.md)** - [ Quest 5 >](quest5.md)
