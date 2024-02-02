@@ -32,35 +32,26 @@ Our journey will start from ...
 
 ## [Quest 1](student/quest1.md) - Using Gen AI to create images
 
-🌟🌟
+🌟
 🕒 15 min
 
 ## [Quest 2](student/quest2.md) - 
 
-🌟🌟🌟
+🌟🌟
 🕒 45 mins
 
 ⏳Take a natural break here if suitable.
 
 ## [Quest 3](student/quest3.md) - 
 
-🌟🌟🌟🌟
-🕒 1,5 h
+🌟🌟🌟
+🕒 30 min
 
 ## [Quest 4](student/quest4.md) - 
 
-🌟
+🌟🌟🌟🌟
 🕒 30 mins
 
-## [Quest 5](student/quest5.md) - 
-
-🌟🌟
-🕒 1 h
-
-## [Quest 6](student/quest6.md) - 
-
-🌟
-🕒 30 mins
 
 Approach the last quest with a bang
 
