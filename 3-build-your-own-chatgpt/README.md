@@ -35,19 +35,19 @@ Our journey will start from ...
 🌟
 🕒 15 min
 
-## [Quest 2](student/quest2.md) - 
+## [Quest 2](student/quest2.md) - Create your 1. Chatbot 
 
 🌟🌟
 🕒 45 mins
 
 ⏳Take a natural break here if suitable.
 
-## [Quest 3](student/quest3.md) - 
+## [Quest 3](student/quest3.md) - Extend your Chatbot with more Data
 
 🌟🌟🌟
 🕒 30 min
 
-## [Quest 4](student/quest4.md) - 
+## [Quest 4](student/quest4.md) - Lets Chat with SAP
 
 🌟🌟🌟🌟
 🕒 30 mins
