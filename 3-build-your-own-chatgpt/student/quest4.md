@@ -14,7 +14,7 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 * Go to `Topics & Plugins` -> `Systems` and disable the `Conversational boosting`
 ![Disable Boosting](../media/quest4/01-DisabledBoosting.png)
 
-* Select the `Fallback` topic and under the first Trigger, click on `+` and from `Advanced` -> select `Send HTTP request`
+* Stay in the section of `System` topics, select the `Fallback` topic and under the first Trigger, click on `+` and from `Advanced` -> select `Send HTTP request`
 ![Disable Boosting](../media/quest4/02-AddHTTPAction.png)
 
 * Change the Method to `Post` and use the following URL to call a preconfigured Power Automate flow that handles the connection to the SAP system. 
