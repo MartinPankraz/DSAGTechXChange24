@@ -23,7 +23,7 @@ Our journey will start from ...
 >⏱Allow ~2 hours to complete your journey
 
 > [!IMPORTANT]
->The guide and screenshots refer to the English terms. We recommend to **adjust your browser language to English** to avoid confusion. Some of the translated texts can be misleading. 
+>The guide and screenshots refer to the English terms. We recommend to **adjust your browser language to English** to avoid confusion. Otherwise some of the translated texts can be misleading. 
 
 ## Meet your Mentors, learn more about the journey and kick-off
 
@@ -32,8 +32,8 @@ Our journey will start from ...
 
 ## [Quest 1](student/quest1.md) - Using Gen AI to create images
 
-🌟🌟🌟🌟
-🕒 1 h
+🌟🌟
+🕒 15 min
 
 ## [Quest 2](student/quest2.md) - 
 
