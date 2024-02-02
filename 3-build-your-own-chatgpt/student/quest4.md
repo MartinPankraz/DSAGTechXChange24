@@ -44,7 +44,7 @@ https://prod-117.westus.logic.azure.com:443/workflows/2b7d54acc9e94c3b93dee086b4
 * Click on the `+` to add the `Send message step`
 ![Disable Boosting](../media/quest4/10-AddMessage.png)
 
-* Click on the `Send` icon and select `Adaptive card`
+* Click on the `+ Add` icon and select `Adaptive card`
 ![Disable Boosting](../media/quest4/11-ChangeAdaptiveCard.png)
 
 * On the right hand side click on `Edit JSON` and select `Formula`
