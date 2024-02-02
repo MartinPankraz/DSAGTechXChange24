@@ -364,7 +364,7 @@ To set up remote debugging for this CAP project, follow [this step-by-step guide
 :construction: Add link to repo once guide is there.
 
 > [!TIP]
-> If you use other Azure platform services in your own project, you may want to browse the marketplace for Visual Studio Code. There are a lot of extensions avaialble which are maintained and published by Microsoft and the community. Just select Categoriy `Azure` in search field or click this link: [https://marketplace.visualstudio.com/search?target=VSCode&category=Azure&sortBy=Publisher](https://marketplace.visualstudio.com/search?target=VSCode&category=Azure&sortBy=Publisher).
+> If you use other Azure platform services in your own project, you may want to browse the marketplace for Visual Studio Code. There are a lot of extensions avaialble which are maintained and published by Microsoft and the community. Just select Categoriy `Azure` in search field or click [here](https://marketplace.visualstudio.com/search?target=VSCode&category=Azure&sortBy=Publisher).
 
 ## Where to next?
 
