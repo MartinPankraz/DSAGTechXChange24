@@ -28,17 +28,17 @@ Our journey will start from ...
 ## Meet your Mentors, learn more about the journey and kick-off
 
 🌟
-🕒 30 mins
+🕒 20 mins
 
 ## [Quest 1](student/quest1.md) - Using Gen AI to create images
 
 🌟
 🕒 15 min
 
-## [Quest 2](student/quest2.md) - Create your 1. Chatbot 
+## [Quest 2](student/quest2.md) - Create your first own Chatbot 
 
 🌟🌟
-🕒 45 mins
+🕒 25 mins
 
 ⏳Take a natural break here if suitable.
 
@@ -47,7 +47,7 @@ Our journey will start from ...
 🌟🌟🌟
 🕒 30 min
 
-## [Quest 4](student/quest4.md) - Lets Chat with SAP
+## [Quest 4](student/quest4.md) - Lets Chat with a real SAP system
 
 🌟🌟🌟🌟
 🕒 30 mins
