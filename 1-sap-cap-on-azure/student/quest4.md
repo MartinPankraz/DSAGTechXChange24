@@ -99,8 +99,6 @@ In this quest, you will bring your application to the Azure cloud to make it ava
   azd env set APP_USE_ENTRAID_AUTHENTICATION "false"
   ```
 
-  :construction: We'd need to confirm resource quotas.
-
 > [!TIP]
 > <details><summary>If you want, confirm these values...</summary>
 > ...have been written successfully by running
@@ -359,8 +357,7 @@ To ensure security an application you deploy to Azure, one crucial point is to p
 
 Once in a while, you may need to connect to your application running on Azure to debug your source code. VS Code allows you to remotely debug a Node.js application running on Azure directly from your IDE as described [here](https://code.visualstudio.com/docs/azure/remote-debugging). This capability comes with the [Azure App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) that  also allows you to perform administrative tasks like restarting from your IDE.
 
-To set up remote debugging for this CAP project, follow [this step-by-step guide](http://...) in the project repository.
-:construction: Add link to repo once guide is there.
+To set up remote debugging for this CAP project, follow [this step-by-step guide](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/documentation/DEBUG.md) in the project repository.
 
 > [!TIP]
 > If you use other Azure platform services in your own project, you may want to browse the marketplace for Visual Studio Code. There are a lot of extensions avaialble which are maintained and published by Microsoft and the community. Just select Categoriy `Azure` in search field or click [here](https://marketplace.visualstudio.com/search?target=VSCode&category=Azure&sortBy=Publisher).

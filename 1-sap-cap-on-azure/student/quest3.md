@@ -118,8 +118,6 @@ In this quest, you will set up and test your own development environment for you
   }
   ```
   
-  :construction: Fiori view did not show up.
-
 ## Where to next?
 
 [ < Quest 2 ](quest2.md) - **[🏠Home](../README.md)** - [ Quest 4 >](quest4.md)
