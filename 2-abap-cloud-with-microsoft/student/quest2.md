@@ -89,7 +89,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 | Name | `Z_PROD_W_AI_O4_##` |
 | Binding Type | `OData V4 - UI` |
 
-8. Click `Finish` to generate the service.
+8. Click `Next` and `Finish` to generate the service.
 9. Choose existing transport request `S4HK902222` with Description "DSAG-TechXChange" and click `OK`.
 
 > [!IMPORTANT]
