@@ -99,7 +99,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 With the current state of embedded steampunk the newly generated raw Fiori app has no labels and no descriptions. We will add them now.
 
-1. Open the metadata extension `ZC_PROD_W_AI_##` object and add the annotations below (don't forget to replace the ## with your number).
+1. Open the metadata extension `ZC_PROD_W_AI_##` object from the `Code Data Services` section of your package and add the annotations below (don't forget to replace the ## with your number).
 
 ```diff
 @Metadata.layer: #CORE
