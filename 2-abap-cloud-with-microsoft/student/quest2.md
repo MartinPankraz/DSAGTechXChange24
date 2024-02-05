@@ -99,7 +99,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 With the current state of embedded steampunk the newly generated raw Fiori app has no labels and no descriptions. We will add them now.
 
-1. Open the metadata extension `ZC_PROD_W_AI_##` object from the `Code Data Services` section of your package and add the annotations below (don't forget to replace the ## with your number).
+1. Open the metadata extension `ZC_PROD_W_AI_##` object from the `Code Data Services` section of your package and replace the content with the one shown below to add annotations (don't forget to replace the ## with your number).
 
 ```diff
 @Metadata.layer: #CORE
@@ -200,7 +200,7 @@ With the current state of embedded steampunk the newly generated raw Fiori app h
 }
 ```
 
-2. Open the behavior definition `ZR_PROD_W_AI_##` object and set your primary key to be enumerated automatically. Otherwise, you will get errors once you try to create a second product entry on Fiori.
+2. Open the behavior definition `ZR_PROD_W_AI_##` object and set your primary key to be enumerated automatically (see definition of field `ProductUUID`). Otherwise, you will get errors once you try to create a second product entry on Fiori.
 
 > [!IMPORTANT]
 > Pay attention to the method `GenerateDescriptionWithAI`. This is where the magic happens. We will implement it in the next steps.
