@@ -272,6 +272,9 @@ authorization master( global )
 
 4. On the spawned browser session, create a new product entry, and save it.
 
+> [!NOTE]
+> The screenshot includes the ProductUUID; this field will be hidden if you copied the code from the step above (see annotation `@UI.hidden: false` of field `productuuid`).
+
 ![Screenshot of preview screen creating a new product without description](../media/quest2-3.png)
 
 5. Verify that the product was created successfully from the overview pane by navigating back and clicking the blue `Go` button.
