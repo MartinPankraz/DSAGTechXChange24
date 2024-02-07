@@ -264,8 +264,6 @@ The setup comes with three basic dashboards that you can access via the portal o
     azd monitor --live
     ```
 
-    :construction: Shows me 'No Data'.
-
   - Log datasink:
     ```
     azd monitor --logs
