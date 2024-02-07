@@ -86,7 +86,6 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 - Specify following environment properties; get all values from the link provided by your coaches:
   ```
-  azd env new [YOUR PARTICIPANT ID HERE, e.g. mhp-1] 
   azd env set AZURE_RESOURCE_GROUP "[YOUR PARTICIPANT ID HERE, e.g. mhp-1]"
   azd env set AZURE_SUBSCRIPTION_ID "[YOUR AZURE SUBSCRIPTION ID HERE]"
   azd env set AZURE_LOCATION "westeurope"
