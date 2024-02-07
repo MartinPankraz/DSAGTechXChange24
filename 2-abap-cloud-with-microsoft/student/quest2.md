@@ -16,9 +16,12 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 > Always save and activate your objects before testing. And don't forget to use your assigned number ## in the object names.
 
 #### Create a new ABAP package
+
 1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (New -> ABAP Package), ensure the package type is set to Development, and check the box `Add to favorite packages`. Choose `Next`.
 2. Fill in the name `HOME` as Software Component. Choose `Finish`.
 3. Assign the new package to the transport request `S4HK902222` with Description "DSAG-TechXChange".
+
+See the selected package setting `ABAP for Cloud Development` for `Default ABAP Language Version` on the "General Data" section of your package. If it is not set, please set it now.
 
 #### Create a new database table
 
