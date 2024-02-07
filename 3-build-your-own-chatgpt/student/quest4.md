@@ -8,7 +8,7 @@ As before we will use the power of generative AI to help us interact with the bo
 This Power Automate flow is pre-build and basically takes the input from the Copilot Studio chabot, extracts the intend and asks the SAP ES5 system for product information. 
 
 > [!NOTE]
-> Note: You can take a look at the Power Automate Flow here xxx. Feel free to rebuild it at a later time following these xxx instructions in your own environment. 
+> Note: You can take a look at the Power Automate Flow [here](../media/quest4/PowerAutomateFlow.png). 
 
 
 * Go to `Topics & Plugins` -> `Systems` and disable the `Conversational boosting`

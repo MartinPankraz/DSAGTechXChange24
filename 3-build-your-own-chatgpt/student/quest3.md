@@ -31,7 +31,7 @@ e.g. `Wie war das Quartalsergebnis von SAP?` oder
 ![Sign In](../media/quest3/05-MoreChats.png)
 
 
-TODO: Publish website wie in Quest 2.
+* Feel free to publish the Chatbot following the steps in the previous quest
 
 
 ## Where to next?
