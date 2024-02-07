@@ -17,7 +17,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 #### Create a new ABAP package
 
-1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (New -> ABAP Package), ensure the package type is set to Development, and check the box `Add to favorite packages`. Choose `Next`.
+1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (Right-click on the project explorer -> New -> ABAP Package), ensure the package type is set to Development, and check the box `Add to favorite packages`. Choose `Next`.
 2. Fill in the name `HOME` as Software Component. Choose `Finish`.
 3. Assign the new package to the transport request `S4HK902222` with Description "DSAG-TechXChange".
 
