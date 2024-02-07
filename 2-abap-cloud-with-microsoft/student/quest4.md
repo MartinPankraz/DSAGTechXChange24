@@ -161,7 +161,7 @@ DATA:
 | Price | 2239 |
 | Currency | EUR |
 
-Optionally add a breakpoint on Eclipse and see your AI request in action step by step. Ensure liveliness of your debug session by clicking ``:
+Optionally add a breakpoint on Eclipse and see your AI request in action step by step. Ensure liveliness of your debug session by clicking ``Refresh Breakpoint Activation`` from the context menu of the area indicating the code's line numbers:
 
 [![](../media/quest4-2.png)](../media/quest4-2.png)
 

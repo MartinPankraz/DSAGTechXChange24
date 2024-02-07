@@ -13,10 +13,11 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 ### Generate RAP service
 
 > [!IMPORTANT]
-> Always save and activate your objects before testing.
+> Always save and activate your objects before testing. And don't forget to use your assigned number ## in the object names.
 
-1. Navigate to your empty pre-prepared package `ZDSAG_MSFT_AI_##` and create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
-2. Find it under Dictionary -> Database Tables and double-click on it.
+1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (New -> ABAP Package), check the box `Add to favorite packages`, and assign it to the transport request `S4HK902222` with Description "DSAG-TechXChange".
+2. Create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
+3. Find it under Dictionary -> Database Tables and double-click on it.
 
 > [!NOTE]
 > The screenshot below shows an already populated RAP service. Yours will be empty.
@@ -89,7 +90,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 | Name | `Z_PROD_W_AI_O4_##` |
 | Binding Type | `OData V4 - UI` |
 
-8. Click `Finish` to generate the service.
+8. Click `Next` and `Finish` to generate the service.
 9. Choose existing transport request `S4HK902222` with Description "DSAG-TechXChange" and click `OK`.
 
 > [!IMPORTANT]
@@ -99,7 +100,7 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 
 With the current state of embedded steampunk the newly generated raw Fiori app has no labels and no descriptions. We will add them now.
 
-1. Open the metadata extension `ZC_PROD_W_AI_##` object and add the annotations below (don't forget to replace the ## with your number).
+1. Open the metadata extension `ZC_PROD_W_AI_##` object from the `Code Data Services` section of your package and replace the content with the one shown below to add annotations (don't forget to replace the ## with your number).
 
 ```diff
 @Metadata.layer: #CORE
@@ -200,7 +201,7 @@ With the current state of embedded steampunk the newly generated raw Fiori app h
 }
 ```
 
-2. Open the behavior definition `ZR_PROD_W_AI_##` object and set your primary key to be enumerated automatically. Otherwise, you will get errors once you try to create a second product entry on Fiori.
+2. Open the behavior definition `ZR_PROD_W_AI_##` object and set your primary key to be enumerated automatically (see definition of field `ProductUUID`). Otherwise, you will get errors once you try to create a second product entry on Fiori.
 
 > [!IMPORTANT]
 > Pay attention to the method `GenerateDescriptionWithAI`. This is where the magic happens. We will implement it in the next steps.
@@ -271,6 +272,9 @@ authorization master( global )
 > Ad-hoc lab systems are often not fully configured for ease of effort. Deal with the dummy nodomain challenge (vhcals4hci.dummy.nodomain) by replacing with the IP address you got from your dungeon master earlier. Ignore the SSL certificate error and continue. Provide your credentials to logon to the Fiori preview.
 
 4. On the spawned browser session, create a new product entry, and save it.
+
+> [!NOTE]
+> The screenshot includes the ProductUUID; this field will be hidden if you copied the code from the step above (see annotation `@UI.hidden: false` of field `productuuid`).
 
 ![Screenshot of preview screen creating a new product without description](../media/quest2-3.png)
 
