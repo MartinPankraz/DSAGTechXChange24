@@ -9,7 +9,7 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Explore the Azure Portal 
 
-- Open the Rest Endpoint and find values `azure-username` and `azure-password`.
+- Open the Rest Endpoint and find values `azure-user-name` and `azure-pwd`.
 
 - Open a new browser tab, go to the [Azure Portal (https://portal.azure.com)](https://portal.azure.com) and log in using these credentials.
 
