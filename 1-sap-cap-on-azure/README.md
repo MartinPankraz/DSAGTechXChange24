@@ -68,7 +68,7 @@ Our journey will start from the very beginning and will take you through the fol
 Approach the last quest with a bang
 
 > [!TIP]
->🏆Finish [quest 4](student/quest4.md), share your application link to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
+>🏆Finish [quest 4](student/quest4.md), share your application link to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎 May the ninja-cat be with you.
 
 ## Where to next?
 

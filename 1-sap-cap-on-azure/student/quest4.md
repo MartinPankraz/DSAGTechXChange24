@@ -227,7 +227,7 @@ As managed service, the "App Service" resource hosting your application comes wi
 
 ## Claim your badge now! 🎖️
 
-Congratulations! You have successfully completed this tutorial and can show your friends that you have now successfully deployed you SAP CAP application to Azure App Services. To claim your badge, you need an URL and an access code from your coaches. Therefore, please send a short mail to your [dungeon masters](mailto:martin.pankraz@microsoft.com) and share the link to your application. They will respond with the passphrase upon successful verification.
+Congratulations! You have successfully completed this tutorial and can show your friends that you have now successfully deployed you SAP CAP application to Azure App Services. To [claim your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html), you need an URL and an access code from your coaches. Therefore, please send a short mail to your [dungeon masters](mailto:martin.pankraz@microsoft.com) and share the link to your application. They will respond with the passphrase upon successful verification.
 
 ```
 To:       [Coaches' mail address.]
@@ -236,6 +236,8 @@ Subject:  I'm done!
 Body:
 [Paste your application URL here.]
 ```
+
+May the ninja-cat be with you.
 
 ## Further exploration
 

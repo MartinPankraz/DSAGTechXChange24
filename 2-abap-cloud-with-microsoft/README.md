@@ -67,7 +67,7 @@ Before you start using the Microsoft AI SDK for SAP, you will play with and fine
 Once you are happy with your prompt, you will add the Microsoft AI SDK for SAP to your project and use it to generate fancy product descriptions during the create process.
 
 > [!TIP]
->🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
+>🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward-abap.html) 😎
 
 ## Where to next?
 

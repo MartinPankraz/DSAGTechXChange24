@@ -56,10 +56,8 @@ Our journey will start from ...
 🕒 30 mins
 >Now we do some advanced exercise. Chat with SAP data!
 
-Approach the last quest with a bang
-
 > [!TIP]
->🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
+>🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward-chatgpt.html) 😎
 
 ## Where to next?
 

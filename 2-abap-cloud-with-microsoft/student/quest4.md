@@ -166,7 +166,7 @@ Optionally add a breakpoint on Eclipse and see your AI request in action step by
 [![](../media/quest4-2.png)](../media/quest4-2.png)
 
 > [!TIP]
->🏆Finish the final quest and send [us](mailto:martin.pankraz@microsoft.com) a Screenshot of your Fiori screen with the best AI-generated product description to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
+>🏆Finish the final quest and send [us](mailto:martin.pankraz@microsoft.com) a Screenshot of your Fiori screen with the best AI-generated product description to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward-abap.html) 😎 May the ninja-cat be with you.
 
 Let your coaches know what you liked best and which AI scenario you will be testing next in your own projects.
 
