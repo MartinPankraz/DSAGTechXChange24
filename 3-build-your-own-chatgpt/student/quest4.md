@@ -92,9 +92,9 @@ This Power Automate flow is pre-build and basically takes the input from the Cop
 
 * Feel free to continue the conversation with the bot. (E.g., by responding with `Speakers, please.` if you're asked which category you are interested in.)
 
-* Save your changes by clicking the button int he upper right corner.
+* Save your changes by clicking the button in the upper right corner.
 
-* You can also publish the new changes. Click on `Publish` on the left hand side, and `Publish`. Then you can click on the `Demo Webiste` 
+* You can also publish the new changes. Click on `Publish` on the left hand side, and `Publish`. Then you can click on the `Demo Website` 
     ![Disable Boosting](../media/quest4/16-Publish.png)
 
 * Test the bot on the demo site
