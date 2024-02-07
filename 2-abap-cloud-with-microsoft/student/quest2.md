@@ -13,10 +13,11 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 ### Generate RAP service
 
 > [!IMPORTANT]
-> Always save and activate your objects before testing.
+> Always save and activate your objects before testing. And don't forget to use your assigned number ## in the object names.
 
-1. Navigate to your empty pre-prepared package `ZDSAG_MSFT_AI_##` and create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
-2. Find it under Dictionary -> Database Tables and double-click on it.
+1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (New -> ABAP Package), check the box `Add to favorite packages`, and assign it to the transport request `S4HK902222` with Description "DSAG-TechXChange".
+2. Create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
+3. Find it under Dictionary -> Database Tables and double-click on it.
 
 > [!NOTE]
 > The screenshot below shows an already populated RAP service. Yours will be empty.
