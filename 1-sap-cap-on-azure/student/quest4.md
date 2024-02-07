@@ -9,7 +9,7 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 
 ## Explore the Azure Portal 
 
-- Open the Rest Endpoint and find values `azure-username` and `azure-password`.
+- Open the Rest Endpoint and find values `azure-user-name` and `azure-pwd`.
 
 - Open a new browser tab, go to the [Azure Portal (https://portal.azure.com)](https://portal.azure.com) and log in using these credentials.
 
@@ -70,7 +70,7 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 - In the terminal, switch into the `azd-rg` directory of your workspace.
 
   ```
-  cd $CODESPACE_VSCODE_FOLDER/azd-rg
+  cd ../azd-rg
   ```
 
 - Create a new Azure Developer CLI [environment](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/faq#what-is-an-environment-name). The environment will contain all parameters that are required to deploy the application to Azure and connect to the OData service.
