@@ -40,7 +40,7 @@ Our journey will start from ...
 
 🌟🌟
 🕒 25 mins
->Lets start with your first own chatbot you ever created, it's easy! 
+>Lets start with your first own chatbot you ever created, it's easy! You can even connect to to public websites!
 
 ⏳Take a natural break here if suitable.
 
@@ -48,7 +48,7 @@ Our journey will start from ...
 
 🌟🌟🌟
 🕒 30 min
->Check out how easy it is to extend the chatbot capabilities ...
+>Check out how easy it is to extend the chatbot capabilities with your own data!
 
 ## [Quest 4](student/quest4.md) - Lets Chat with a real SAP system
 
