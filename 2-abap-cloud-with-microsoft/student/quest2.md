@@ -15,9 +15,15 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 > [!IMPORTANT]
 > Always save and activate your objects before testing. And don't forget to use your assigned number ## in the object names.
 
-1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (New -> ABAP Package), check the box `Add to favorite packages`, and assign it to the transport request `S4HK902222` with Description "DSAG-TechXChange".
-2. Create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
-3. Find it under Dictionary -> Database Tables and double-click on it.
+#### Create a new ABAP package
+1. Create the package `ZDSAG_MSFT_AI_##` for this dungeon (New -> ABAP Package), ensure the package type is set to Development, and check the box `Add to favorite packages`. Choose `Next`.
+2. Fill in the name `HOME` as Software Component. Choose `Finish`.
+3. Assign the new package to the transport request `S4HK902222` with Description "DSAG-TechXChange".
+
+#### Create a new database table
+
+1. Create a new database table (New -> Other ABAP Repository Object -> Dictionary) named ZPROD_W_AI_##.
+2. Find it under Dictionary -> Database Tables and double-click on it.
 
 > [!NOTE]
 > The screenshot below shows an already populated RAP service. Yours will be empty.
@@ -52,9 +58,12 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 ```
 
 4. Save (<kbd> Ctrl </kbd> + <kbd> s </kbd>) and Activate the table (<kbd> Ctrl </kbd> + <kbd> F3 </kbd>).
-5. Right-click on the table and choose `Generate ABAP Repository Objects`.
-6. Select `ABAP RESTful ABAP Programming Model: UI Service` under `Generator` and click `Next`.
-7. Work through the wizard and verify defaulted values for each RAP layer. Make sure they contain your number ##.
+
+#### Generate the RAP service objects
+
+1. Right-click on the table and choose `Generate ABAP Repository Objects`.
+2. Select `ABAP RESTful ABAP Programming Model: UI Service` under `Generator` and click `Next`.
+3. Work through the wizard and verify defaulted values for each RAP layer. Make sure they contain your number ##.
 
 #### Business Object -> Data Model
 
@@ -90,8 +99,8 @@ In this quest, you will generate an SAP RESTful ABAP Programming model service b
 | Name | `Z_PROD_W_AI_O4_##` |
 | Binding Type | `OData V4 - UI` |
 
-8. Click `Next` and `Finish` to generate the service.
-9. Choose existing transport request `S4HK902222` with Description "DSAG-TechXChange" and click `OK`.
+4. Click `Next` and `Finish` to generate the service.
+5. Choose existing transport request `S4HK902222` with Description "DSAG-TechXChange" and click `OK`.
 
 > [!IMPORTANT]
 > If you encounter consistency or naming errors during object generation, you need to go back, delete the generated objects, and start over. Make sure to use the correct naming convention for your objects.
