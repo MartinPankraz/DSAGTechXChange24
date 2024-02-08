@@ -9,6 +9,45 @@ With this first experience, of what is possible with GPT, lets create a first ch
 > If you do not have a Microsoft Work or School account yet, sign-up for the [M365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
 > For the DSAGTechXChange Hands on, we will provide a username to you
 
+
+> [!NOTE]
+> For participants in the DSAG TechXChange please use the following user assigned to you
+> | DSAG User | Copilot Studio User |
+> |--------------|-----------|
+> |User 1|alans@CRM625261.OnMicrosoft.com	|
+> |User 2|aliciat@CRM625261.OnMicrosoft.com|	
+> |User 3|allieb@CRM625261.OnMicrosoft.com|	
+> |User 4|amya@CRM625261.OnMicrosoft.com	|
+> |User 5|annew@CRM625261.OnMicrosoft.com	|
+> |User 6|carlosg@CRM625261.OnMicrosoft.com	|
+> |User 7|christag@CRM625261.OnMicrosoft.com|	
+> |User 8|danj@CRM625261.OnMicrosoft.com	|
+> |User 9|davids@CRM625261.OnMicrosoft.com	|
+> |User 10|dianep@CRM625261.OnMicrosoft.com|	
+> |User 11|ericg@CRM625261.OnMicrosoft.com	|
+> |User 12|gregw@CRM625261.OnMicrosoft.com	|
+> |User 13|jamier@CRM625261.OnMicrosoft.com|	
+> |User 14|jeffh@CRM625261.OnMicrosoft.com	|
+> |User 15|juliani@CRM625261.OnMicrosoft.com|	
+> |User 16|karenb@CRM625261.OnMicrosoft.com|	
+> |User 17|kellyk@CRM625261.OnMicrosoft.com|	
+> |User 18|mollyc@CRM625261.OnMicrosoft.com|	
+> |User 19|reneel@CRM625261.OnMicrosoft.com|	
+> |User 20|sanjays@CRM625261.OnMicrosoft.com	|
+> |User 21|spencerl@CRM625261.OnMicrosoft.com|	
+> |User 22|svenm@CRM625261.OnMicrosoft.com	|
+> |User 23|veronicaq@CRM625261.OnMicrosoft.com|	
+> |User 24|williamc@CRM625261.OnMicrosoft.com|	
+> |---|- Careful, the Domain is changed for the next ones! - |
+> |User 25|jeffh@CRM433983.onmicrosoft.com|	
+> |User 26|juliani@CRM433983.onmicrosoft.com|	
+> |User 27|karenb@CRM433983.onmicrosoft.com|	
+> |User 28|kellyk@CRM433983.onmicrosoft.com|	
+> |User 29|gregw@CRM433983.onmicrosoft.com|	
+> |User 30|ericg@CRM433983.onmicrosoft.com|
+
+
+
 * Enter the `Microsoft Corp / Work Email Address`
 ![Sign In](../media/quest2/01-SignIn.png)
 
