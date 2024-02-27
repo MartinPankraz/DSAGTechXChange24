@@ -76,7 +76,7 @@ In this quest, you will bring your application to the Azure cloud to make it ava
 - Create a new Azure Developer CLI [environment](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/faq#what-is-an-environment-name). The environment will contain all parameters that are required to deploy the application to Azure and connect to the OData service.
 
   ```
-  azd env new [Put your user  name here]
+  azd env new [YOUR PARTICIPANT ID HERE, e.g. mhp-1]
   ```
   e.g.,
 
@@ -263,8 +263,6 @@ The setup comes with three basic dashboards that you can access via the portal o
     ```
     azd monitor --live
     ```
-
-    :construction: Shows me 'No Data'.
 
   - Log datasink:
     ```

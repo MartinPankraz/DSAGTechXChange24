@@ -16,6 +16,8 @@ Find us on-site in Hamburg. We are looking forward to meeting you in person! �
 
 🔜 Using **Terraform for Cross-Cloud Setup** of **SAP BTP** and **Microsoft Azure**. Session 🗓️POSTPONED to [BTP Betriebstage](https://dsagnet.de/event/btp-betriebstag-1) on 19th - 20th of March in Frankenthal, Germany. Sign-up [here](https://dsagnet.de/event/btp-betriebstag-1).
 
+Partner featured sessions [Neptune DXP with Microsoft Power Automate challenge](https://github.com/hobru/DSAGTechXChange-Neptune-PowerPlatform)
+
 > [!TIP]
 >🏆Finish the final quest, collect the pass phrase, and redeem it to claim [your badge](https://webhostingforconverter.z16.web.core.windows.net/claim-reward.html) 😎
 
