@@ -11,6 +11,9 @@ You will be expanding your developer and architect horizon and ultimately be equ
 - [Azure subscription](https://azure.microsoft.com/free/) with quota for at least 1 App Service Plan (B1) and 1 Azure Cosmos DB for PostgreSQL (citus) - Total Regional Coordinator Cores
 - [Authorization](https://learn.microsoft.com/entra/identity-platform/howto-create-service-principal-portal) to create resources in a resource group, Azure AD applications, and service principals in your Azure subscription
 
+> [!WARNING]
+> Verify the latest [SAP's open-source license](https://github.com/cap-js) for SAP CAP for your reference. Please be aware if your SAP libraries are still using the [SAP Developer License](https://tools.eu1.hana.ondemand.com/developer-license-3_1.txt). Components are being added to open-source by SAP on an ongoing basis according to their road map published [here.](https://blogs.sap.com/2023/10/02/open-sourcing-cap-how-to-learn-more-or-get-involved/)
+
 ### Dev environment setup as per the [dev-container](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/.devcontainer/devcontainer.json)
 
 - [⭐Recommended] GitHub Codespaces fully configured out-of-the-box (ensure at least 2h of compute hours are left on your account)
