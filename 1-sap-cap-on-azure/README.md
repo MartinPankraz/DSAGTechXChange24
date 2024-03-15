@@ -12,7 +12,7 @@ You will be expanding your developer and architect horizon and ultimately be equ
 - [Authorization](https://learn.microsoft.com/entra/identity-platform/howto-create-service-principal-portal) to create resources in a resource group, Azure AD applications, and service principals in your Azure subscription
 
 > [!WARNING]
-> Verify the latest [SAP's open-source license](https://github.com/cap-js) for SAP CAP for your reference. Please be aware if your SAP libraries are still using the [SAP Developer License](https://tools.eu1.hana.ondemand.com/developer-license-3_1.txt). Components are being added to open-source by SAP on an ongoing basis according to their road map published [here.](https://blogs.sap.com/2023/10/02/open-sourcing-cap-how-to-learn-more-or-get-involved/) When in doubt, consider the SAP Cloud SDK on Azure instead.
+> Verify the latest [SAP's open-source license](https://github.com/cap-js) for SAP CAP for your reference. Please be aware if your SAP libraries are still using the [SAP Developer License](https://tools.eu1.hana.ondemand.com/developer-license-3_1.txt). Components are being added to open-source by SAP on an ongoing basis according to their road map published [here.](https://blogs.sap.com/2023/10/02/open-sourcing-cap-how-to-learn-more-or-get-involved/) When in doubt, consider the [SAP Cloud SDK on Azure](https://github.com/Azure-Samples/app-service-javascript-sap-cloud-sdk-quickstart) instead.
 
 ### Dev environment setup as per the [dev-container](https://github.com/Azure-Samples/app-service-javascript-sap-cap-quickstart/blob/main/.devcontainer/devcontainer.json)
 
